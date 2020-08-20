@@ -53,7 +53,7 @@
             <!--begin::Content header-->
             <div class="position-absolute top-0 right-0 text-right mt-5 mb-15 mb-lg-0 flex-column-auto justify-content-center py-5 px-10">
                 <span class="font-weight-bold text-dark-50">@lang('info.dontHaveAccountYet')</span>
-                <a href="javascript:;" class="font-weight-bold ml-2" id="kt_login_signup">@lang('info.signUp')</a>
+                <a href="{{route('register')}}" class="font-weight-bold ml-2">@lang('info.signUp')</a>
             </div>
             <!--end::Content header-->
 
@@ -67,95 +67,45 @@
                     </div>
 
                     <!--begin::Form-->
-                    <form class="form" novalidate="novalidate" id="kt_login_signin_form">
+                    <form class="form"   method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="form-group">
-                            <input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="@lang('info.placeholderUser')" name="username" autocomplete="off"/>
+                            <input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="@lang('info.placeholderUser')" name="email" autocomplete="off" required/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="@lang('info.placeholderPass')" name="password" autocomplete="off"/>
+                            <input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="@lang('info.placeholderPass')" name="password" autocomplete="off" required/>
                         </div>
                         <!--begin::Action-->
                         <div class="form-group d-flex flex-wrap justify-content-between align-items-center">
-                            <a href="javascript:;" class="text-dark-50 text-hover-primary my-3 mr-2" id="kt_login_forgot">
+                            <a href="{{route('password.request')}}" class="text-dark-50 text-hover-primary my-3 mr-2" >
                                 @lang('info.forgetPassQuestion')
                             </a>
-                            <button type="button" id="kt_login_signin_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3">@lang('info.signIn')</button>
+                            <button type="submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3">@lang('info.signIn')</button>
                         </div>
                         <!--end::Action-->
                     </form>
                     <!--end::Form-->
                 </div>
                 <!--end::Signin-->
-
-                <!--begin::Signup-->
-                <div class="login-form login-signup">
-                    <div class="text-center mb-10 mb-lg-20">
-                        <h3 class="font-size-h1">Sign Up</h3>
-                        <p class="text-muted font-weight-bold">Enter your details to create your account</p>
-                    </div>
-
-                    <!--begin::Form-->
-                    <form class="form" novalidate="novalidate" id="kt_login_signup_form">
-                        <div class="form-group">
-                            <input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="Fullname" name="fullname" autocomplete="off"/>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="email" autocomplete="off"/>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Password" name="password" autocomplete="off"/>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirm password" name="cpassword" autocomplete="off"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="checkbox mb-0">
-                                <input type="checkbox" name="agree"/>
-                                <span></span>
-                                I Agree the <a href="#">terms and conditions</a>
-                            </label>
-                        </div>
-                        <div class="form-group d-flex flex-wrap flex-center">
-                            <button type="button" id="kt_login_signup_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Submit</button>
-                            <button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancel</button>
-                        </div>
-                    </form>
-                    <!--end::Form-->
-                </div>
-                <!--end::Signup-->
-
-                <!--begin::Forgot-->
-                <div class="login-form login-forgot">
-                    <div class="text-center mb-10 mb-lg-20">
-                        <h3 class="font-size-h1">Forgotten Password ?</h3>
-                        <p class="text-muted font-weight-bold">Enter your email to reset your password</p>
-                    </div>
-
-                    <!--begin::Form-->
-                    <form class="form" novalidate="novalidate" id="kt_login_forgot_form">
-                        <div class="form-group">
-                            <input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="email" autocomplete="off"/>
-                        </div>
-                        <div class="form-group d-flex flex-wrap flex-center">
-                            <button type="button" id="kt_login_forgot_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Submit</button>
-                            <button type="button" id="kt_login_forgot_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancel</button>
-                        </div>
-                    </form>
-                    <!--end::Form-->
-                </div>
-                <!--end::Forgot-->
             </div>
             <!--end::Content body-->
-
+            <div class="opacity-70 font-weight-bold	text-white">
+                @lang('info.copyright')
+            </div>
+            <div class="d-flex">
+                <a href="{{route('page','privacy')}}" class="text-white">@lang('info.privacy')</a>
+                <a href="{{route('page','legal')}}" class="text-white ml-10">@lang('info.legal')</a>
+                <a href="{{route('page','contact')}}" class="text-white ml-10">@lang('info.contact')</a>
+            </div>
             <!--begin::Content footer for mobile-->
             <div class="d-flex d-lg-none flex-column-auto flex-column flex-sm-row justify-content-between align-items-center mt-5 p-5">
                 <div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">
-                    &copy; 2020 Metronic
+                    @lang('info.copyright')
                 </div>
                 <div class="d-flex order-1 order-sm-2 my-2">
-                    <a href="#" class="text-dark-75 text-hover-primary">Privacy</a>
-                    <a href="#" class="text-dark-75 text-hover-primary ml-4">Legal</a>
-                    <a href="#" class="text-dark-75 text-hover-primary ml-4">Contact</a>
+                    <a href="{{route('page','privacy')}}" class="text-dark-75 text-hover-primary">@lang('info.privacy')</a>
+                    <a href="{{route('page','legal')}}" class="text-dark-75 text-hover-primary ml-4">@lang('info.legal')</a>
+                    <a href="{{route('page','contact')}}" class="text-dark-75 text-hover-primary ml-4">@lang('info.contact')</a>
                 </div>
             </div>
             <!--end::Content footer for mobile-->
@@ -171,5 +121,5 @@
 @endsection
 
 @section('footerScript')
-    <script src="assets/js/pages/custom/login/login-general.js"></script>
+    {{--<script src="assets/js/pages/custom/login/login-general.js"></script>--}}
 @endsection

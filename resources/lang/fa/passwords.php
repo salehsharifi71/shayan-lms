@@ -12,11 +12,15 @@ return [
     | has failed, such as for an invalid token or invalid new password.
     |
     */
+    "password" => "رمز عبور اشتباه است.",
 
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have emailed your password reset link!',
-    'throttled' => 'Please wait before retrying.',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that email address.",
+    "user" => "کاربری با این ایمیل آدرس یافت نشد.",
+
+    "token" => "مشخصه ی بازنشاندن رمز عبور اشتباه است.",
+
+    "sent" => "ایمیل بروز رسانی رمز عبور برای شما ارسال شد.",
+
+    "reset"    => "رمز عبور به روز رسانی شد!",
+    'throttled' => 'لطفا قبل از تلاش مجدد چند دقیقه صبر کنید.',
 
 ];

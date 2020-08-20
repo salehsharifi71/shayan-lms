@@ -105,6 +105,36 @@ fanavaran novin jahani (fenj.ir)
 <script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 <script src="assets/js/scripts.bundle.js"></script>
 @yield('footerScript')
+<script>
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+
+</script>
+@if ($errors->any())
+    <script>
+        msg='';
+
+        @foreach($errors->all() as $error)
+
+            msg= msg + "{!! $error !!} <br>";
+        @endforeach
+        toastr.error(msg);
+</script>
+@endif
 </body>
 <!--end::Body-->
 </html>

@@ -22,8 +22,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="120">
-                <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <first_editor relative-caret-position="100">
+                <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -557,7 +557,7 @@
       <workItem from="1597323214376" duration="4794000" />
       <workItem from="1597391059261" duration="655000" />
       <workItem from="1597664237693" duration="7946000" />
-      <workItem from="1597896642235" duration="16338000" />
+      <workItem from="1597896642235" duration="17096000" />
     </task>
     <task id="LOCAL-00001" summary="add theme">
       <created>1597750220251</created>
@@ -594,11 +594,18 @@
       <option name="project" value="LOCAL" />
       <updated>1598070954033</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="readme">
+      <created>1598071039598</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598071039598</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30739000" />
+    <option name="totallyTimeSpent" value="31497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -635,7 +642,8 @@
     <MESSAGE value="تکمیل لاگین و ثبت نام کاربر" />
     <MESSAGE value="پایان ثبت نام - فعال سازی اکانت" />
     <MESSAGE value="قالب داشبورد کنترل پنل کاربران شایان" />
-    <option name="LAST_COMMIT_MESSAGE" value="قالب داشبورد کنترل پنل کاربران شایان" />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1058,8 +1066,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <first_editor relative-caret-position="100">
+            <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
             <folding />
           </first_editor>
           <second_editor />

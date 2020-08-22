@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::get('/page/{slug}', 'HomeController@page')->name('page');
 Auth::routes(['verify' => true]);
-Route::get('/dashboard', 'Panel\DashboardController@dashboard')->name('home');
+Route::get('/organizer/dashboard', 'Organizer\DashboardController@dashboard')->name('home');
+Route::get('/organizer/site', 'Organizer\SiteController@index')->name('orgSite');

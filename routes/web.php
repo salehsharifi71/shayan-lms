@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/page/{slug}', 'HomeController@page')->name('page');
 Auth::routes(['verify' => true]);
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/dashboard', 'Panel\DashboardController@dashboard')->name('home');

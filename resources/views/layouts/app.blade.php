@@ -14,9 +14,11 @@ fanavaran novin jahani (fenj.ir)
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <!--begin::Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>        <!--end::Fonts-->
+
     @if(app()->getLocale()=='fa')
         <link href="assets/css/fa.font.css" rel="stylesheet" type="text/css" />
+    @else
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>        <!--end::Fonts-->
     @endif
     @yield('style')
     @yield('headScript')

@@ -22,7 +22,7 @@ class CreateOrganizersTable extends Migration
             $table->string('logo')->nullable();
             $table->date('expireAt')->nullable();
             $table->boolean('isActive')->default(true);
-            $table->integer('wage')->default(5);
+            $table->integer('packagesite_id')->default(1);
         });
     }
 

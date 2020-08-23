@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/page/{slug}', 'HomeController@page')->name('page');
 Auth::routes(['verify' => true]);
 Route::get('/organizer/dashboard', 'Organizer\DashboardController@dashboard')->name('home');
-Route::get('/organizer/site', 'Organizer\SiteController@index')->name('orgSite');
+Route::any('/organizer/site', 'Organizer\SiteController@index')->name('orgSite');
+Route::get('/organizer/package', 'Organizer\SiteController@package')->name('orgPackage');

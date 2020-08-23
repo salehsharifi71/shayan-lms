@@ -1,5 +1,5 @@
 @extends('layouts.panel')
-@section('title') |‌ @lang('info.dashboard') @endsection
+@section('title') @lang('info.dashboard') | @endsection
 @section('subheader') @lang('info.dashboard') @endsection
 @section('panelContent')
 <div class="container">

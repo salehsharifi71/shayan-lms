@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('role')->default(0);
             $table->boolean('isBlock')->default(false);
+            $table->decimal('credit')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

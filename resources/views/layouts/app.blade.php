@@ -137,6 +137,10 @@ fanavaran novin jahani (fenj.ir)
         toastr.error(msg);
 </script>
 @endif
+
+@if(session()->has('success'))
+   <script> toastr.success(' {{ session()->get('success') }} ');</script>
+@endif
 </body>
 <!--end::Body-->
 </html>

@@ -22,3 +22,8 @@ Auth::routes(['verify' => true]);
 Route::get('/organizer/dashboard', 'Organizer\DashboardController@dashboard')->name('home');
 Route::any('/organizer/site', 'Organizer\SiteController@index')->name('orgSite');
 Route::get('/organizer/package', 'Organizer\SiteController@package')->name('orgPackage');
+Route::get('/organizer/class', 'Organizer\ClassController@classWebinar')->name('orgClass');
+Route::any('/organizer/class/{id}', 'Organizer\ClassController@classWebinarEdit')->name('orgClassEdit');
+
+Route::any('/support/', 'Organizer\ClassController@classWebinarEdit')->name('support');
+Route::any('/support/new', 'Organizer\ClassController@classWebinarEdit')->name('supportNew');

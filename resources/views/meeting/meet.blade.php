@@ -2,7 +2,9 @@
 @section('title') @lang('info.orgMeet') | @endsection
 @section('subheader')   @endsection
 @section('panelContent')
-<div class="col-md-12">
+    @inject('stringService', 'App\Services\StringService')
+
+    <div class="col-md-12">
     <div class="card card-custom gutter-b">
         <div class="card-header">
             <div class="card-title">
@@ -17,43 +19,38 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Status</th>
+            <th scope="col">@lang('info.title')</th>
+            <th scope="col">@lang('info.startAt')</th>
+            <th scope="col">@lang('info.expireAt')</th>
+            <th scope="col">@lang('info.status')</th>
+            <th scope="col">@lang('info.op')</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Nick</td>
-            <td>Stone</td>
-            <td>
-                <span class="label label-inline label-light-primary font-weight-bold">
-                    Pending
-                </span>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Ana</td>
-            <td>Jacobs</td>
-            <td>
-                <span class="label label-inline label-light-success font-weight-bold">
-                    Approved
-                </span>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>Pettis</td>
-            <td>
-                <span class="label label-inline label-light-danger font-weight-bold">
-                    New
-                </span>
-            </td>
-        </tr>
+        @foreach($meetings as $meet)
+            <tr>
+                <td>{{$meet->title}}</td>
+                <td>{{$stringService->prettyNumber(jdate($meet->startAt)->format('%d %B  %Y'))}}</td>
+                <td>{{$stringService->prettyNumber(jdate($meet->expired_at)->format('%d %B  %Y'))}}</td>
+                <td>
+                    @if($meet->status==0)
+                        <span class="label label-inline label-light-warning font-weight-bold">
+                            @lang('info.waitPayment')
+                        </span>
+                   @elseif($meet->status==10)
+                        <span class="label label-inline label-light-success font-weight-bold">
+                            @lang('info.ready')
+                        </span>
+                    @endif
+
+                </td>
+                <td>
+                    @if($meet->status==0)
+                        <a href="{{route('makePayment',['id'=>$meet->hash,'kind'=>'1'])}}"><button class="btn btn-success btn-sm"> <i class="fas fa-dollar-sign"></i> @lang('info.pay')</button> </a>
+                    @endif
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
         </div>

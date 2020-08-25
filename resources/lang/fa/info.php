@@ -63,6 +63,7 @@ return [
     'startTime' => 'ساعت شروع ',
     'closeTime' => 'ساعت پایان ',
     'startAt' => 'تاریخ شروع ',
+    'expireAt' => 'تاریخ پایان ',
     'staticSettingDes' => 'تنظیمات زیر در آینده قابل ویرایش نخواهند بود.',
     'maxOnlineUser' => 'حداکثر ظرفیت کلاس',
     'person' => 'نفر',
@@ -75,4 +76,9 @@ return [
     'isActiveRecording' => 'امکان ضبط کلاس ',
     'calcPrice' => 'هزینه برگزاری  ',
     'priceUnit' => 'تومان',
+    'status' => 'وضعیت',
+    'op' => 'عملیات',
+    'waitPayment' => 'منتظر پرداخت',
+    'ready' => 'آماده',
+    'pay' => 'پرداخت',
 ];

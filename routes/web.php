@@ -27,3 +27,6 @@ Route::any('/organizer/class/{id}', 'Organizer\ClassController@classWebinarEdit'
 
 Route::any('/support/', 'Organizer\ClassController@classWebinarEdit')->name('support');
 Route::any('/support/new', 'Organizer\ClassController@classWebinarEdit')->name('supportNew');
+
+Route::any('/payment/{kind}/{id?}', 'Bank\PaymentController@makePayment')->name('makePayment');
+Route::any('/payment/callbackSaman', 'Bank\PaymentController@callbackSaman')->name('callbackSaman');

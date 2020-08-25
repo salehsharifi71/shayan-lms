@@ -141,6 +141,8 @@ fanavaran novin jahani (fenj.ir)
 @if(session()->has('success'))
    <script> toastr.success(' {{ session()->get('success') }} ');</script>
 @endif
+
+<script src="assets/js/fenj.js"></script>
 </body>
 <!--end::Body-->
 </html>

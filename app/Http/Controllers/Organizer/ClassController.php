@@ -118,4 +118,9 @@ class ClassController extends Controller
         return substr(md5($num), 0, 5);
 
     }
+    public function classStudentEdit($id, Logdb $logdb){
+        $user = auth()->user();
+        $meet=Meet::where('user_id',$user->id)->where('hash',$id)->firstOrFail();
+        $clients='';
+    }
 }

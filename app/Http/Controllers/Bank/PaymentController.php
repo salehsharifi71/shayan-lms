@@ -35,18 +35,9 @@ class PaymentController extends Controller
         $sep_Amount 		= $payment->amount*10;							// قیمت به ریال
         $sep_ResNum 		= $payment->id;							// شماره سفارش
         $sep_RedirectURL 	= route('callbackSaman');	// لینک برگشت و برسی نتیجه تراکنش
-
         return '
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146920367-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag(\'js\', new Date());
 
-        gtag(\'config\', \'UA-146920367-1\');
-    </script>
 <form action="https://sep.shaparak.ir/payment.aspx" method="post">
 	<input type="hidden" name="Amount" value="'.$sep_Amount.'" />
 	<input type="hidden" name="ResNum" value="'.$sep_ResNum.'">
@@ -57,10 +48,12 @@ class PaymentController extends Controller
 
 <script type="text/javascript">window.onload = formSubmit; function formSubmit() { document.forms[0].submit(); }</script>';
     }
+
     public function callbackSaman(){
 //        return $_POST;
+        return 1;
         if(isset($_POST['State']) && $_POST['State'] == "OK") {
-
+return $_POST;
             $soapclient = new SoapClient('https://acquirer.samanepay.com/payments/referencepayment.asmx?WSDL');
             $res = $soapclient->VerifyTransaction($_POST['RefNum'], $_POST['MID']);
 
@@ -106,8 +99,7 @@ class PaymentController extends Controller
                             $transaction->description = "افزایش اعتبار ";
                         $transaction->kind = 1;
                         $transaction->save();
-                        $text="پرداخت با موفقیت انجام شد
-";
+                        $text=__('info.successPayment');
 
                     }
                 }
@@ -115,11 +107,10 @@ class PaymentController extends Controller
 
         }
         if(!isset($text))
-            $text="تراکنش با موفقیت به پایان نرسیده است در صورت کسر موجودی از حساب شما و عدم برگشت به حساب پس از 24 ساعت از طریق ارسال تیکت با ما در تماس باشید";
-        if(!isset($user))
-            $user=new User();
+            $text=__('info.cancelPayment');
 
-        return view('payment.result',compact('text','user'));
+
+        return view('payment.result',compact('text'));
 
     }
 

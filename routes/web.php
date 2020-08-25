@@ -24,9 +24,14 @@ Route::any('/organizer/site', 'Organizer\SiteController@index')->name('orgSite')
 Route::get('/organizer/package', 'Organizer\SiteController@package')->name('orgPackage');
 Route::get('/organizer/class', 'Organizer\ClassController@classWebinar')->name('orgClass');
 Route::any('/organizer/class/{id}', 'Organizer\ClassController@classWebinarEdit')->name('orgClassEdit');
+Route::any('/organizer/class/{id}/teacher', 'Organizer\ClassController@classTeacherEdit')->name('orgClassTeacher');
+Route::any('/organizer/class/{id}/student', 'Organizer\ClassController@classStudentEdit')->name('orgClassStudent');
+Route::any('/organizer/quickLogin/{id}', 'Organizer\ClassController@quickLogin')->name('orgQuickLogin');
 
 Route::any('/support/', 'Organizer\ClassController@classWebinarEdit')->name('support');
 Route::any('/support/new', 'Organizer\ClassController@classWebinarEdit')->name('supportNew');
 
+Route::any('/callbackSaman', 'Bank\PaymentController@callbackSaman')->name('callbackSaman');
 Route::any('/payment/{kind}/{id?}', 'Bank\PaymentController@makePayment')->name('makePayment');
-Route::any('/payment/callbackSaman', 'Bank\PaymentController@callbackSaman')->name('callbackSaman');
+
+

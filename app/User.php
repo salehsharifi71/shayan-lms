@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Organizer\Organizer;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -40,4 +41,7 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->HasMany(UserMeta::class);
     }
 
+    public function Organizer(){
+        return $this->hasOne(Organizer::class);
+    }
 }

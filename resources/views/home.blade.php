@@ -70,7 +70,7 @@
                 <!--begin::Body-->
                 <div class="card-body d-flex flex-column align-items-start justify-content-start">
                     <div class="p-1 flex-grow-1 text-center">
-                        <a href="https://fenj.ir" target="_blank">
+                        <a href="https://fenj.ir/order/1" target="_blank">
                         <img src="assets/media/img/ads.png" width="100%">
                         </a>
                     </div>

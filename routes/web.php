@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTTP_HOST'))->first()) {
     Route::get('/', 'Sites\SiteController@index')->name('PublicSite');
-}else {
+}elseif(request()->server->get('HTTP_HOST')==env('APP_LTE')||request()->server->get('HTTP_HOST')=='127.0.0.1:8000') {
+
     Auth::routes(['verify' => true]);
     Route::get('/', function () {
         return view('welcome');
@@ -42,5 +43,15 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
 
     Route::any('/callbackSaman', 'Bank\PaymentController@callbackSaman')->name('callbackSaman');
     Route::any('/payment/{kind}/{id?}', 'Bank\PaymentController@makePayment')->name('makePayment');
+}else{
+    Route::get('{any?}/{?any}', function ( ) {
+        //
+        return "<center><a href='http://".env('APP_LTE')."'>".env('APP_LTE')."</a></center>";
+    });
+
+    Route::get('{any?}', function ( ) {
+        //
+        return "<center><a href='http://".env('APP_LTE')."'>".env('APP_LTE')."</a></center>";
+    });
 }
 

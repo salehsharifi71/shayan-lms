@@ -30,4 +30,19 @@ class StringService
         }
         return $string;
     }
+    public function findSymbol($string){
+        $arr=explode(' ',$string);
+        $txt=substr($string,0,2);
+        if(count($arr)>2){
+            foreach ($arr as $item){
+                $last=$item;
+            }
+            $txt=$txt.'‌'.substr($item,0,2);
+        }else{
+            if(isset($arr[1]))
+                $txt=$txt.'‌'.substr($arr[1],0,2);
+        }
+
+        return $txt;
+    }
 }

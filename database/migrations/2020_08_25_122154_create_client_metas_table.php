@@ -18,7 +18,6 @@ class CreateClientMetasTable extends Migration
             $table->integer('client_id');
             $table->string('meta_key');
             $table->text('meta_value');
-            $table->timestamps();
         });
     }
 

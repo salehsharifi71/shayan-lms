@@ -26,6 +26,9 @@ Route::get('/organizer/class', 'Organizer\ClassController@classWebinar')->name('
 Route::any('/organizer/class/{id}', 'Organizer\ClassController@classWebinarEdit')->name('orgClassEdit');
 Route::any('/organizer/class/{id}/teacher', 'Organizer\ClassController@classTeacherEdit')->name('orgClassTeacher');
 Route::any('/organizer/class/{id}/student', 'Organizer\ClassController@classStudentEdit')->name('orgClassStudent');
+Route::post('/organizer/addUser', 'Organizer\ClassController@addUser')->name('addUser');
+Route::get('/organizer/classUser/{action}/{id}', 'Organizer\ClassController@changeUser')->name('changeUser');
+Route::get('/organizer/changeTeacher/{action}/{id}', 'Organizer\ClassController@changeTeacher')->name('changeTeacher');
 Route::any('/organizer/quickLogin/{id}', 'Organizer\ClassController@quickLogin')->name('orgQuickLogin');
 
 Route::any('/support/', 'Organizer\ClassController@classWebinarEdit')->name('support');

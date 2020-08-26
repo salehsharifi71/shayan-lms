@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Organizer;
 
 use App\Http\Controllers\Controller;
 use App\Model\Meeting\Meet;
+use App\Model\Organizer\Client;
+use App\Model\Organizer\ClientMeta;
 use App\Model\Organizer\Organizer;
 use App\Services\Logdb;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ClassController extends Controller
 {
@@ -118,9 +121,114 @@ class ClassController extends Controller
         return substr(md5($num), 0, 5);
 
     }
+    public function addUser(){
+        $user = auth()->user();
+        if(request()->has('name')) {
+            $this->validate(request(), [
+                'name' => 'required',
+                'password' => 'required',
+                'username' => 'required',
+                'logo' => 'mimes:jpeg,png,jpg,gif',
+            ]);
+            $client=Client::firstOrNew([
+                'username'=>request()->username,
+                'organizer_id'=>$user->Organizer->id,
+            ]);
+            $client->name=request()->name;
+            $client->password= Hash::make(request()->password);
+            if(request()->has('role'))
+                $client->role=request()->role;
+            $client->save();
+            if(request()->has('class')){
+                if(Meet::where('user_id',$user->id)->where('hash',request()->class)->first()) {
+                    $meetClass = ClientMeta::firstOrNew([
+                        'client_id'=>$client->id,
+                        'meta_key'=>'meet',
+                        'meta_value'=>request()->class,
+                    ]);
+                    $meetClass->save();
+                    return redirect(route('orgClassStudent',request()->class))->with(['success' => __('info.saveChange')]);
+                }
+            }
+            //TODO: edit redirect
+
+            return redirect(route('orgClassEdit',request()->class))->with(['success' => __('info.saveChange')]);
+
+        }
+        return redirect()->back();
+    }
     public function classStudentEdit($id, Logdb $logdb){
         $user = auth()->user();
         $meet=Meet::where('user_id',$user->id)->where('hash',$id)->firstOrFail();
-        $clients='';
+        $clients=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->get();
+        $clientsId=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->get()->pluck('id');
+        $clientInClass=ClientMeta::whereIn('client_id',$clientsId)->where('meta_key','meet')->where('meta_value',$id)->get();
+        $clientInClassId=ClientMeta::whereIn('client_id',$clientsId)->where('meta_key','meet')->where('meta_value',$id)->get()->pluck('client_id');
+        $otherClient=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->whereNotIn('id',$clientInClassId)->get();
+
+        return view('meeting.classStudentEdit',compact('meet','user','clients','clientInClass','otherClient'));
+
+    }
+    public function changeUser($action,$id){
+
+        $user = auth()->user();
+        $meet=Meet::where('user_id',$user->id)->where('hash',$id)->first();
+        if(!$meet){
+            return json_encode(array('result'=>'nok','msg'=>__('info.classNotFound')));
+        }
+        if($action=='remove'){
+            if(request()->has('client')) {
+                ClientMeta::where('client_id',request()->client)->where('meta_key','meet')->where('meta_value',$id)->delete();
+            }
+        }
+        if($action=='add'){
+            if(request()->has('client')) {
+                $client=ClientMeta::firstOrNew([
+                    'client_id'=>request()->client,
+                    'meta_key'=>'meet',
+                    'meta_value'=>$id
+                ]);
+                $client->save();
+            }
+        }
+        return json_encode(array('result'=>'ok','msg'=>__('info.saveChange')));
+
+    }
+    public function classTeacherEdit($id, Logdb $logdb){
+        $user = auth()->user();
+        $meet=Meet::where('user_id',$user->id)->where('hash',$id)->firstOrFail();
+        $clients=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->get();
+        $clientsId=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->get()->pluck('id');
+        $clientInClass=ClientMeta::whereIn('client_id',$clientsId)->where('meta_key','meet')->where('meta_value',$id)->get();
+        $clientInClassId=ClientMeta::whereIn('client_id',$clientsId)->where('meta_key','meet')->where('meta_value',$id)->get()->pluck('client_id');
+        $otherClient=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->whereNotIn('id',$clientInClassId)->get();
+
+        return view('meeting.classStudentEdit',compact('meet','user','clients','clientInClass','otherClient'));
+
+    }
+    public function changeTeacher($action,$id){
+
+        $user = auth()->user();
+        $meet=Meet::where('user_id',$user->id)->where('hash',$id)->first();
+        if(!$meet){
+            return json_encode(array('result'=>'nok','msg'=>__('info.classNotFound')));
+        }
+        if($action=='remove'){
+            if(request()->has('client')) {
+                ClientMeta::where('client_id',request()->client)->where('meta_key','meet')->where('meta_value',$id)->delete();
+            }
+        }
+        if($action=='add'){
+            if(request()->has('client')) {
+                $client=ClientMeta::firstOrNew([
+                    'client_id'=>request()->client,
+                    'meta_key'=>'meet',
+                    'meta_value'=>$id
+                ]);
+                $client->save();
+            }
+        }
+        return json_encode(array('result'=>'ok','msg'=>__('info.saveChange')));
+
     }
 }

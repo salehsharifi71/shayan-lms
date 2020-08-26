@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-@if($id==1)
+        @if($id==0)
                 <div class="alert alert-warning" role="alert">
                     @lang('info.staticSettingDes')
                 </div>

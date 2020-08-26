@@ -2,9 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab2af323-d10d-4151-b812-f2f098e3411c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo28.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo29.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo30.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/demos/demo9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/media/products/9.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/fa/info.php" afterPath="$PROJECT_DIR$/resources/lang/fa/info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/panel.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/panel.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php" afterPath="$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <ignored path="public/myup/" />
@@ -21,11 +73,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="23" column="86" lean-forward="false" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="86" />
+            <state relative-caret-position="200">
+              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Sites/SiteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -34,29 +96,39 @@
       <file leaf-file-name="info.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/fa/info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="64" column="15" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="15" />
+            <state relative-caret-position="175">
+              <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classTeacherEdit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/meeting/classTeacherEdit.blade.php">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="67" column="113" lean-forward="false" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="113" />
-              <folding />
+            <state relative-caret-position="780">
+              <caret line="72" column="64" lean-forward="false" selection-start-line="72" selection-start-column="64" selection-end-line="72" selection-end-column="64" />
+              <folding>
+                <element signature="e#442#605#0#HTML" expanded="true" />
+                <element signature="e#1223#1244#0#HTML" expanded="true" />
+                <element signature="e#3353#3374#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="meet.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/meeting/meet.blade.php">
+      <file leaf-file-name="package.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/organizer/package.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="52" />
-              <folding />
+            <state relative-caret-position="80">
+              <caret line="4" column="54" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <marker date="1598184078770" expanded="true" signature="8288:9929" ph="..." />
+                <marker date="1598184078770" expanded="true" signature="8359:9764" ph="..." />
+                <marker date="1598184078770" expanded="true" signature="8471:8943" ph="..." />
+                <marker date="1598184078770" expanded="true" signature="9031:9234" ph="..." />
+                <marker date="1598184078770" expanded="true" signature="9858:9904" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,12 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>begin::Sticky Toolbar</find>
-      <find>container</find>
-      <find>kt-ckeditor-1</find>
-      <find>strin</find>
-      <find>bootstrap-timepicker-widget</find>
-      <find>mydate</find>
       <find>kt_timepicker_1</find>
       <find>kt_touchspin_2</find>
       <find>تومان</find>
@@ -85,7 +151,6 @@
       <find>clengh</find>
       <find>save</find>
       <find>telSupport</find>
-      <find>string</find>
       <find>expire</find>
       <find>/payment/callbackSaman</find>
       <find>پرداخت</find>
@@ -98,10 +163,17 @@
       <find>orgMeetClass</find>
       <find>ذخیره</find>
       <find>افزودن</find>
-      <find>renew</find>
       <find>logout</find>
-      <find>addNewClass</find>
       <find>orgMeeting</find>
+      <find>==1</find>
+      <find>logo</find>
+      <find>domain</find>
+      <find>string</find>
+      <find>format</find>
+      <find>strin</find>
+      <find>addNewClass</find>
+      <find>users</find>
+      <find>renew</find>
     </findStrings>
     <replaceStrings>
       <replace>telsupport</replace>
@@ -113,7 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
@@ -126,7 +197,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2020_08_22_070418_create_logdbs_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_08_13_125040_create_user_metas_table.php" />
         <option value="$PROJECT_DIR$/app/UserMeta.php" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_08_22_054355_create_organizers_table.php" />
         <option value="$PROJECT_DIR$/app/Model/Organizer/Organizer.php" />
         <option value="$PROJECT_DIR$/app/Model/Organizer/Packagesite.php" />
@@ -139,7 +209,6 @@
         <option value="$PROJECT_DIR$/app/Model/Meeting/Meet.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2020_08_24_035542_create_meets_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/fa.font.css" />
         <option value="$PROJECT_DIR$/app/Model/Bank/Payment.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_08_25_061251_create_payments_table.php" />
@@ -160,10 +229,13 @@
         <option value="$PROJECT_DIR$/resources/views/meeting/classStudentEdit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" />
         <option value="$PROJECT_DIR$/resources/views/meeting/classTeacherEdit.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/meeting/meet.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/fa/info.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/panel.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Sites/SiteController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -714,6 +786,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Sites" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Organizer" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -837,7 +935,7 @@
       <workItem from="1597391059261" duration="655000" />
       <workItem from="1597664237693" duration="7946000" />
       <workItem from="1597896642235" duration="70029000" />
-      <workItem from="1598333723659" duration="28812000" />
+      <workItem from="1598333723659" duration="32442000" />
     </task>
     <task id="LOCAL-00001" summary="add theme">
       <created>1597750220251</created>
@@ -951,11 +1049,18 @@
       <option name="project" value="LOCAL" />
       <updated>1598440594338</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="اصلاح هدر سایت">
+      <created>1598447224103</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598447224103</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113242000" />
+    <option name="totallyTimeSpent" value="116872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -968,7 +1073,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20458265" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1685761" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1001,23 +1106,14 @@
     <MESSAGE value="دیتابیس کاربران" />
     <MESSAGE value="افزودن کاربر به کلاس" />
     <MESSAGE value="افزودن مدرس به کلاس" />
-    <option name="LAST_COMMIT_MESSAGE" value="افزودن مدرس به کلاس" />
+    <MESSAGE value="اصلاح هدر سایت" />
+    <option name="LAST_COMMIT_MESSAGE" value="اصلاح هدر سایت" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="20">
-            <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/DashboardController.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1072,13 +1168,6 @@
         <state relative-caret-position="200">
           <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1157,13 +1246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/organizer/package.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="91" column="82" lean-forward="false" selection-start-line="91" selection-start-column="82" selection-end-line="91" selection-end-column="111" />
         </state>
       </provider>
     </entry>
@@ -1319,16 +1401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="166" column="22" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding>
-            <marker date="1598266679922" expanded="true" signature="10318:12671" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/StringService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1383,14 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/meeting/meet.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/meeting/classTeacherEdit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1399,38 +1463,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/fa/info.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/panel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="64" column="15" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="15" />
+        <state relative-caret-position="140">
+          <caret line="681" column="118" lean-forward="false" selection-start-line="681" selection-start-column="112" selection-end-line="681" selection-end-column="118" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/panel.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="65" column="66" lean-forward="false" selection-start-line="65" selection-start-column="66" selection-end-line="65" selection-end-column="66" />
+        <state relative-caret-position="140">
+          <caret line="326" column="40" lean-forward="false" selection-start-line="326" selection-start-column="34" selection-end-line="326" selection-end-column="40" />
           <folding>
-            <element signature="e#11668#11688#0#HTML" expanded="true" />
-            <element signature="e#11646#63661#0#HTML" expanded="false" />
-            <element signature="e#12010#14327#0#HTML" expanded="false" />
-            <element signature="e#14621#63573#0#HTML" expanded="false" />
-            <element signature="e#14939#14996#0#HTML" expanded="true" />
-            <element signature="e#65383#65440#0#HTML" expanded="true" />
-            <element signature="e#66278#66316#0#HTML" expanded="true" />
-            <element signature="e#66424#69177#0#HTML" expanded="false" />
-            <element signature="e#77992#116657#0#HTML" expanded="false" />
-            <element signature="e#116763#117813#0#HTML" expanded="false" />
-            <element signature="e#117847#117868#0#HTML" expanded="true" />
+            <marker date="1598447270926" expanded="true" signature="10326:12679" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/meeting/meet.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="35" column="83" lean-forward="false" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/organizer/package.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="54" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1598184078770" expanded="true" signature="8288:9929" ph="..." />
+            <marker date="1598184078770" expanded="true" signature="8359:9764" ph="..." />
+            <marker date="1598184078770" expanded="true" signature="8471:8943" ph="..." />
+            <marker date="1598184078770" expanded="true" signature="9031:9234" ph="..." />
+            <marker date="1598184078770" expanded="true" signature="9858:9904" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="72" column="64" lean-forward="false" selection-start-line="72" selection-start-column="64" selection-end-line="72" selection-end-column="64" />
+          <folding>
+            <element signature="e#442#605#0#HTML" expanded="true" />
+            <element signature="e#1223#1244#0#HTML" expanded="true" />
+            <element signature="e#3353#3374#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/fa/info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="23" column="86" lean-forward="false" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="86" />
+        <state relative-caret-position="200">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Sites/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding />
         </state>
       </provider>

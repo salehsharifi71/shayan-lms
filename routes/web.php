@@ -23,6 +23,8 @@ Route::get('/organizer/dashboard', 'Organizer\DashboardController@dashboard')->n
 Route::any('/organizer/site', 'Organizer\SiteController@index')->name('orgSite');
 Route::get('/organizer/package', 'Organizer\SiteController@package')->name('orgPackage');
 Route::get('/organizer/class', 'Organizer\ClassController@classWebinar')->name('orgClass');
+Route::get('/organizer/teachers', 'Organizer\ClassController@classWebinar')->name('orgTeachers');
+Route::get('/organizer/users', 'Organizer\ClassController@classWebinar')->name('orgUsers');
 Route::any('/organizer/class/{id}', 'Organizer\ClassController@classWebinarEdit')->name('orgClassEdit');
 Route::any('/organizer/class/{id}/teacher', 'Organizer\ClassController@classTeacherEdit')->name('orgClassTeacher');
 Route::any('/organizer/class/{id}/student', 'Organizer\ClassController@classStudentEdit')->name('orgClassStudent');

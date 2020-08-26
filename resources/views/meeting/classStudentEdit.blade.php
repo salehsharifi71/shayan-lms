@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="card-body" id="classStd">
-                <div id="otEmpty" @if(count($clientInClass)>0) style="display: none" @endif>
+                <div id="clsEmpty" @if(count($clientInClass)>0) style="display: none" @endif>
                     @lang('info.emptyList')
                 </div>
                 @foreach($clientInClass as $client)
@@ -181,7 +181,7 @@
                     };
                     toastr.error(obj['msg']);
                 }
-
+                checkEmpty();
             }
         };
         xmlhttp.open("GET","{{route('changeUser',['id'=>$meet->hash,'action'=>'remove'])}}?client="+id,true);
@@ -242,11 +242,27 @@
                     };
                     toastr.error(obj['msg']);
                 }
-
+                checkEmpty();
             }
         };
         xmlhttp.open("GET","{{route('changeUser',['id'=>$meet->hash,'action'=>'add'])}}?client="+id,true);
         xmlhttp.send();
+    }
+    function checkEmpty() {
+
+        var classStd = $('#classStd').find('*[id^="client"]');
+        var OtherStd = $('#OtherStd').find('*[id^="client"]');
+        console.log(classStd.length);
+        if(classStd.length == '0'){
+            document.getElementById('clsEmpty').style.display='block';
+        }else{
+            document.getElementById('clsEmpty').style.display='none';
+        }
+        if(OtherStd.length == 0){
+            document.getElementById('otEmpty').style.display='block';
+        }else{
+            document.getElementById('otEmpty').style.display='none';
+        }
     }
     </script>
 @endsection

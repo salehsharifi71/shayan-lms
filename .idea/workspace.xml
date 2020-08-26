@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab2af323-d10d-4151-b812-f2f098e3411c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/meeting/classStudentEdit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/meeting/classTeacherEdit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Organizer/Client.php" afterPath="$PROJECT_DIR$/app/Model/Organizer/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Organizer/ClientMeta.php" afterPath="$PROJECT_DIR$/app/Model/Organizer/ClientMeta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/StringService.php" afterPath="$PROJECT_DIR$/app/Services/StringService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2020_08_25_122154_create_client_metas_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_08_25_122154_create_client_metas_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/fa/info.php" afterPath="$PROJECT_DIR$/resources/lang/fa/info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/meeting/classStudentEdit.blade.php" afterPath="$PROJECT_DIR$/resources/views/meeting/classStudentEdit.blade.php" />
     </list>
     <ignored path="public/myup/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,37 +25,64 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="30" column="116" lean-forward="false" selection-start-line="30" selection-start-column="116" selection-end-line="30" selection-end-column="116" />
+            <state relative-caret-position="166">
+              <caret line="26" column="112" lean-forward="false" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="112" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="info.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/lang/fa/info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="23" />
+            <state relative-caret-position="101">
+              <caret line="91" column="42" lean-forward="false" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClassController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="208" column="33" lean-forward="false" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="33" />
+            <state relative-caret-position="231">
+              <caret line="152" column="127" lean-forward="false" selection-start-line="152" selection-start-column="127" selection-end-line="152" selection-end-column="127" />
               <folding>
                 <element signature="e#50#86#0#PHP" expanded="true" />
                 <element signature="e#363#439#0#PHP" expanded="false" />
                 <element signature="e#444#667#0#PHP" expanded="false" />
                 <element signature="e#672#4821#0#PHP" expanded="false" />
                 <element signature="e#4826#4929#0#PHP" expanded="false" />
-                <element signature="e#4934#6407#0#PHP" expanded="false" />
-                <element signature="e#6412#7305#0#PHP" expanded="false" />
-                <element signature="e#7310#8216#0#PHP" expanded="false" />
+                <element signature="e#6610#7503#0#PHP" expanded="false" />
+                <element signature="e#8419#9312#0#PHP" expanded="false" />
+                <element signature="e#9317#10226#0#PHP" expanded="false" />
+                <marker date="1598440323142" expanded="false" signature="7548:8413" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classTeacherEdit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/meeting/classTeacherEdit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="94" column="92" lean-forward="false" selection-start-line="94" selection-start-column="92" selection-end-line="94" selection-end-column="92" />
+              <folding>
+                <element signature="e#1103#2651#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classStudentEdit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/meeting/classStudentEdit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="260" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="267" selection-end-column="11" />
+              <folding>
+                <element signature="e#1047#2595#0#HTML" expanded="false" />
+                <element signature="e#6847#10062#0#HTML" expanded="false" />
+                <element signature="e#10095#13313#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -136,8 +159,8 @@
       <find>name</find>
       <find>succ</find>
       <find>انجام شد</find>
-      <find>ذخیره</find>
       <find>renew</find>
+      <find>ذخیره</find>
     </findStrings>
     <replaceStrings>
       <replace>telsupport</replace>
@@ -149,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
@@ -196,10 +218,11 @@
         <option value="$PROJECT_DIR$/app/Model/Organizer/ClientMeta.php" />
         <option value="$PROJECT_DIR$/app/Model/Organizer/Client.php" />
         <option value="$PROJECT_DIR$/app/Services/StringService.php" />
-        <option value="$PROJECT_DIR$/resources/lang/fa/info.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/meeting/classStudentEdit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/meeting/classTeacherEdit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/fa/info.php" />
       </list>
     </option>
   </component>
@@ -873,7 +896,7 @@
       <workItem from="1597391059261" duration="655000" />
       <workItem from="1597664237693" duration="7946000" />
       <workItem from="1597896642235" duration="70029000" />
-      <workItem from="1598333723659" duration="20996000" />
+      <workItem from="1598333723659" duration="22381000" />
     </task>
     <task id="LOCAL-00001" summary="add theme">
       <created>1597750220251</created>
@@ -973,11 +996,18 @@
       <option name="project" value="LOCAL" />
       <updated>1598358481369</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="افزودن کاربر به کلاس">
+      <created>1598439175332</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1598439175332</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105426000" />
+    <option name="totallyTimeSpent" value="106811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1021,20 +1051,14 @@
     <MESSAGE value="پرداخت هزینه کلاس" />
     <MESSAGE value="کپی لینک کلاس" />
     <MESSAGE value="دیتابیس کاربران" />
-    <option name="LAST_COMMIT_MESSAGE" value="دیتابیس کاربران" />
+    <MESSAGE value="افزودن کاربر به کلاس" />
+    <option name="LAST_COMMIT_MESSAGE" value="افزودن کاربر به کلاس" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="108" column="15" lean-forward="false" selection-start-line="105" selection-start-column="16" selection-end-line="108" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1397,47 +1421,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/fa/info.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/meeting/classStudentEdit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="175">
+          <caret line="260" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="267" selection-end-column="11" />
+          <folding>
+            <element signature="e#1047#2595#0#HTML" expanded="false" />
+            <element signature="e#6847#10062#0#HTML" expanded="false" />
+            <element signature="e#10095#13313#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="30" column="116" lean-forward="false" selection-start-line="30" selection-start-column="116" selection-end-line="30" selection-end-column="116" />
+        <state relative-caret-position="166">
+          <caret line="26" column="112" lean-forward="false" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="112" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/meeting/classStudentEdit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="247" column="82" lean-forward="false" selection-start-line="247" selection-start-column="82" selection-end-line="247" selection-end-column="82" />
-          <folding>
-            <element signature="e#847#897#0#HTML" expanded="true" />
-            <element signature="e#2983#3031#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="208" column="33" lean-forward="false" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="33" />
+        <state relative-caret-position="231">
+          <caret line="152" column="127" lean-forward="false" selection-start-line="152" selection-start-column="127" selection-end-line="152" selection-end-column="127" />
           <folding>
             <element signature="e#50#86#0#PHP" expanded="true" />
             <element signature="e#363#439#0#PHP" expanded="false" />
             <element signature="e#444#667#0#PHP" expanded="false" />
             <element signature="e#672#4821#0#PHP" expanded="false" />
             <element signature="e#4826#4929#0#PHP" expanded="false" />
-            <element signature="e#4934#6407#0#PHP" expanded="false" />
-            <element signature="e#6412#7305#0#PHP" expanded="false" />
-            <element signature="e#7310#8216#0#PHP" expanded="false" />
+            <element signature="e#6610#7503#0#PHP" expanded="false" />
+            <element signature="e#8419#9312#0#PHP" expanded="false" />
+            <element signature="e#9317#10226#0#PHP" expanded="false" />
+            <marker date="1598440323142" expanded="false" signature="7548:8413" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/meeting/classTeacherEdit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="94" column="92" lean-forward="false" selection-start-line="94" selection-start-column="92" selection-end-line="94" selection-end-column="92" />
+          <folding>
+            <element signature="e#1103#2651#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/fa/info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="91" column="42" lean-forward="false" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

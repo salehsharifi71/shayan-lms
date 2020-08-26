@@ -147,7 +147,10 @@ class ClassController extends Controller
                         'meta_value'=>request()->class,
                     ]);
                     $meetClass->save();
-                    return redirect(route('orgClassStudent',request()->class))->with(['success' => __('info.saveChange')]);
+                    if($client->role==0)
+                        return redirect(route('orgClassStudent',request()->class))->with(['success' => __('info.saveChange')]);
+                    else
+                        return redirect(route('orgClassTeacher',request()->class))->with(['success' => __('info.saveChange')]);
                 }
             }
             //TODO: edit redirect
@@ -197,13 +200,13 @@ class ClassController extends Controller
     public function classTeacherEdit($id, Logdb $logdb){
         $user = auth()->user();
         $meet=Meet::where('user_id',$user->id)->where('hash',$id)->firstOrFail();
-        $clients=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->get();
-        $clientsId=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->get()->pluck('id');
+        $clients=Client::where('organizer_id',$user->Organizer->id)->where('role',1)->get();
+        $clientsId=Client::where('organizer_id',$user->Organizer->id)->where('role',1)->get()->pluck('id');
         $clientInClass=ClientMeta::whereIn('client_id',$clientsId)->where('meta_key','meet')->where('meta_value',$id)->get();
         $clientInClassId=ClientMeta::whereIn('client_id',$clientsId)->where('meta_key','meet')->where('meta_value',$id)->get()->pluck('client_id');
-        $otherClient=Client::where('organizer_id',$user->Organizer->id)->where('role',0)->whereNotIn('id',$clientInClassId)->get();
+        $otherClient=Client::where('organizer_id',$user->Organizer->id)->where('role',1)->whereNotIn('id',$clientInClassId)->get();
 
-        return view('meeting.classStudentEdit',compact('meet','user','clients','clientInClass','otherClient'));
+        return view('meeting.classTeacherEdit',compact('meet','user','clients','clientInClass','otherClient'));
 
     }
     public function changeTeacher($action,$id){

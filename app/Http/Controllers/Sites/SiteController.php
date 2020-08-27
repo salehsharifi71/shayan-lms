@@ -17,5 +17,6 @@ class SiteController extends Controller
 
     public function index(){
         $organizer= $this->organizer;
+
     }
 }

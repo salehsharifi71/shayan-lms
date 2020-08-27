@@ -18,9 +18,7 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
 }elseif(request()->server->get('HTTP_HOST')==env('APP_LTE')||request()->server->get('HTTP_HOST')=='127.0.0.1:8000') {
 
     Auth::routes(['verify' => true]);
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('welcome');
+    Route::get('/', 'HomeController@landing')->name('welcome');
 
     Route::get('/page/{slug}', 'HomeController@page')->name('page');
 

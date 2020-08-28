@@ -51,7 +51,7 @@ class PaymentController extends Controller
 
     public function callbackSaman(){
 //        return $_POST;
-        return 1;
+//        return 1;
         if(isset($_POST['State']) && $_POST['State'] == "OK") {
 return $_POST;
             $soapclient = new SoapClient('https://acquirer.samanepay.com/payments/referencepayment.asmx?WSDL');

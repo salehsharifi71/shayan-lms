@@ -680,8 +680,9 @@
 
                                                 @else
                            <span class="symbol-label text-white font-size-h5 font-weight-bold bg-white-o-30">{{$stringService->findSymbol(Auth::user()->name)}}</span>
-                           </span>
+
                                         @endif
+                                        </span>
                                     </div>
                                 </div>
 

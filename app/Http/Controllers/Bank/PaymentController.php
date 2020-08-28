@@ -53,10 +53,10 @@ class PaymentController extends Controller
 //        return $_POST;
 //        return 1;
         if(isset($_POST['State']) && $_POST['State'] == "OK") {
-return $_POST;
-            $soapclient = new SoapClient('https://acquirer.samanepay.com/payments/referencepayment.asmx?WSDL');
+//return $_POST;
+            $soapclient = new \SoapClient('https://acquirer.samanepay.com/payments/referencepayment.asmx?WSDL');
             $res = $soapclient->VerifyTransaction($_POST['RefNum'], $_POST['MID']);
-
+//            return $res;
             if( $res <= 0 ) {
                 $error="";
             } else {

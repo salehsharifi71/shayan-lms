@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Organizer\Packagesite;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,6 +19,7 @@ class HomeController extends Controller
         return view('home');
     }
     public function landing(){
-        return view('welcome');
+        $packages=Packagesite::where('isActive',1)->get();
+        return view('welcome',compact('packages'));
     }
 }

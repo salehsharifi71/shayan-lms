@@ -176,8 +176,6 @@ class PaymentController extends Controller
                 $payment->ref = $result->RefID;
                 $payment->gateway = 'زرین پال';
                 $payment->save();
-                $user->credit = $user->credit + $payment->amount;
-                $user->save();
 
                 $transaction = new Transaction();
                 $transaction->user_id = $user->id;
@@ -190,7 +188,6 @@ class PaymentController extends Controller
                     else{
                         $meet->status=10;
                         $date=new Carbon($meet->expired_at);
-
                         if($meet->clength==1)
                             $meet->expired_at= $date->addDays(7);
                         elseif($meet->clength==2)
@@ -199,8 +196,11 @@ class PaymentController extends Controller
                             $meet->expired_at= $date->addYear();
                     }
                     $meet->save();
-                }else
+                }else {
                     $transaction->description = "افزایش اعتبار ";
+                    $user->credit = $user->credit + $payment->amount;
+                    $user->save();
+                }
                 $transaction->kind = 1;
                 $transaction->save();
                 $text=__('info.successPayment');

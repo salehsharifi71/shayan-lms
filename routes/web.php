@@ -41,6 +41,7 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
     Route::any('/support/new', 'Organizer\ClassController@classWebinarEdit')->name('supportNew');
 
     Route::any('/callbackSaman', 'Bank\PaymentController@callbackSaman')->name('callbackSaman');
+    Route::get('/callbackZarinPal', 'Bank\PaymentController@callbackZarinPal')->name('callbackZarinPal');
     Route::any('/payment/{kind}/{id?}', 'Bank\PaymentController@makePayment')->name('makePayment');
 }else{
     Route::get('{any?}/{?any}', function ( ) {

@@ -117,7 +117,7 @@ class PaymentController extends Controller
     }
     public function startZarinPal($payment){
 
-        $MerchantID = '9a6dd7c0-1995-11e6-9da1-005056a205be'; //Required
+        $MerchantID = '1d86c271-a4ea-412c-88e8-672f6a183bd2'; //Required
         $Amount = $payment->amount; //Amount will be based on Toman - Required
         $Description = $payment->User->name; // Required
         $Email = $payment->User->email; // Optional
@@ -154,7 +154,7 @@ class PaymentController extends Controller
 //        return 1;
         if(isset($_GET['Authority'])&&isset($_GET['Status']) && $_GET['Status'] == "OK") {
             $Authority = $_GET['Authority'];
-            $MerchantID = '9a6dd7c0-1995-11e6-9da1-005056a205be';
+            $MerchantID = '1d86c271-a4ea-412c-88e8-672f6a183bd2';
 
             $payment=Payment::where('stb',$Authority)->firstOrFail();
 
@@ -182,6 +182,7 @@ class PaymentController extends Controller
                 $transaction->amount = $payment->amount;
                 if($payment->kind==1) {
                     $transaction->description = "فعال سازی کلاس";
+                    $transaction->kind = 0;
                     $meet=Meet::where('id',$payment->inv_id)->first();
                     if($meet->status==0)
                         $meet->status=10;
@@ -200,8 +201,8 @@ class PaymentController extends Controller
                     $transaction->description = "افزایش اعتبار ";
                     $user->credit = $user->credit + $payment->amount;
                     $user->save();
+                    $transaction->kind = 1;
                 }
-                $transaction->kind = 1;
                 $transaction->save();
                 $text=__('info.successPayment');
             } else {

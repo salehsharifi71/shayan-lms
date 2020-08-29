@@ -125,7 +125,7 @@ class PaymentController extends Controller
         $CallbackURL = route('callbackZarinPal');; // Required
 
 
-        $client = new SoapClient('https://www.zarinpal.com/pg/services/WebGate/wsdl', ['encoding' => 'UTF-8']);
+        $client = new \SoapClient('https://www.zarinpal.com/pg/services/WebGate/wsdl', ['encoding' => 'UTF-8']);
 
         $result = $client->PaymentRequest(
             [

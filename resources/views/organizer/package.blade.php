@@ -73,7 +73,8 @@
                                     @if($organizer->packagesite_id==$package->id)
                                         <button type="button" class="btn btn-success text-uppercase font-weight-bolder px-15 py-3" disabled><i class="flaticon2-check-mark"></i> @lang('info.activePackage') </button>
                                     @else
-                                        <button type="button" class="btn btn-success text-uppercase font-weight-bolder px-15 py-3">@lang('info.pBuy')</button>
+
+                                        <button type="button" class="btn btn-success text-uppercase font-weight-bolder px-15 py-3" onclick="changePack('{{route('makePayment',['kind'=>2,'id'=>$package->id])}}')">@lang('info.pBuy')</button>
                                     @endif
                                 </div>
                             </div>
@@ -132,6 +133,28 @@
     </div>
         </div>
     </div>
+
+    <div class="modal fade" id="changePack" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">@lang('info.pBuy')</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i aria-hidden="true" class="ki ki-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @lang('info.pBuyLegal')
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">@lang('info.goBack')</button>
+                    <a href="" id="packageUrl"> <button type="button" class="btn btn-success font-weight-bold">@lang('info.pay')</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 @endsection
 
 @section('footerScript')
@@ -199,7 +222,10 @@
         var avatar5 = new KTImageInput('kt_image_5');
 
 
-
+function changePack(url) {
+    $("#changePack").modal()
+    document.getElementById('packageUrl').href=url;
+}
     </script>
 
 @endsection

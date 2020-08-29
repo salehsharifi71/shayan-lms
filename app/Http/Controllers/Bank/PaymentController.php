@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Model\Bank\Payment;
 use App\Model\Bank\Transaction;
 use App\Model\Meeting\Meet;
+use App\Model\Organizer\Organizer;
+use App\Model\Organizer\Packagesite;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -25,6 +27,12 @@ class PaymentController extends Controller
             $meet=Meet::where('user_id',$user->id)->where('hash',$id)->firstOrFail();
             $payment->inv_id=$meet->id;
             $payment->amount=$meet->price;
+        }elseif($kind==2){
+            $package=Packagesite::where('id',$id)->firstOrFail();
+            $payment->inv_id=$package->id;
+            $payment->amount=$package->price;
+        }else{
+            return abort(403);
         }
         $payment->kind=$kind;
         $payment->user_id=$user->id;
@@ -197,6 +205,15 @@ class PaymentController extends Controller
                             $meet->expired_at= $date->addYear();
                     }
                     $meet->save();
+                }elseif($payment->kind==2) {
+                    $transaction->description = "تغییر پکیج";
+                    $transaction->kind = 0;
+
+                    $organizer=$user->Organizer;
+                    $organizer->isActive=1;
+                    $organizer->packagesite_id=$payment->inv_id;
+                    $organizer->expireAt=Carbon::now()->addYear();
+                    $organizer->save();
                 }else {
                     $transaction->description = "افزایش اعتبار ";
                     $user->credit = $user->credit + $payment->amount;

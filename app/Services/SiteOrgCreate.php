@@ -25,7 +25,7 @@ class SiteOrgCreate
         $c=0;
         $chkDomain=$domain.'.'.env('APP_LTE');
         $date = Carbon::now();
-        $date=$date->addYear();
+        $date=$date->addDays(60);
         while ($this->checkDomain($chkDomain,$user->id)){
             $c++;
             $chkDomain=$domain.$c.'.'.env('APP_LTE');

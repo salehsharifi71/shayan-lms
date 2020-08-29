@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Organizer;
 
 use App\Http\Controllers\Controller;
+use App\Model\Organizer\Organizer;
+use App\Services\SiteOrgCreate;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -22,8 +24,13 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function dashboard()
+    public function dashboard(SiteOrgCreate $siteOrgCreate)
     {
+        $user = auth()->user();
+        $organizer=Organizer::where('user_id',$user->id)->first();
+        if(!$organizer){
+            $organizer = $siteOrgCreate->makeSite($user);
+        }
         return view('home');
     }
 }

@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTTP_HOST'))->first()) {
     Route::get('/', 'Sites\SiteController@index')->name('PublicSite');
+    Route::any('/login', 'Sites\AuthController@login')->name('siteLogin');
+    Route::any('/register', 'Sites\AuthController@register')->name('siteRegister');
 }elseif(request()->server->get('HTTP_HOST')==env('APP_LTE')||request()->server->get('HTTP_HOST')=='127.0.0.1:8000') {
 
     Auth::routes(['verify' => true]);

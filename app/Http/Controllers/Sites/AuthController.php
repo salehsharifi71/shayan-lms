@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Organizer\Organizer;
 use Illuminate\Http\Request;
 
-class SiteController extends Controller
+class AuthController extends Controller
 {
     //
     protected $organizer;
@@ -15,11 +15,11 @@ class SiteController extends Controller
         $this->organizer=Organizer::where('domain', request()->server->get('HTTP_HOST'))->firstOrFail();
     }
 
-    public function index(){
+    public function login(){
         $organizer= $this->organizer;
         if(!$organizer){
             return 0;
         }
-        return view('sites.index',compact('organizer'));
+        return view('sites.login',compact('organizer'));
     }
 }

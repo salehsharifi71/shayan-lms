@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'organizer' => [
+            'driver' => 'session',
+            'provider' => 'clients',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -71,6 +76,10 @@ return [
             'model' => App\User::class,
         ],
 
+        'organizer' => [
+            'driver' => 'eloquent',
+            'model' => \App\Model\Organizer\Client::class,
+        ]
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

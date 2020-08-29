@@ -1,0 +1,9 @@
+
+@media (min-width: 980px){
+    .showMobOnly{display:none!important;}
+}
+
+.imgSchool{
+    width:100%;
+    min-height: 180px !important;
+}

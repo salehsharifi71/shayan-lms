@@ -76,7 +76,7 @@ return [
             'model' => App\User::class,
         ],
 
-        'organizer' => [
+        'clients' => [
             'driver' => 'eloquent',
             'model' => \App\Model\Organizer\Client::class,
         ]

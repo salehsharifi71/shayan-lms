@@ -2,9 +2,10 @@
 
 namespace App\Model\Organizer;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Client extends Authenticatable
 {
     //
     protected $guarded=[];

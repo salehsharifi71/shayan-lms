@@ -21,6 +21,7 @@ class PanelController extends Controller
     }
 
     public function dashboard(){
+        return redirect(route('PublicSite'));
         return 1;
     }
     public function signUpMeeting($hash){

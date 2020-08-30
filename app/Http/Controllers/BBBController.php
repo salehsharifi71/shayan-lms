@@ -62,7 +62,8 @@ class BBBController extends BigBlueButton
         $joinMeetingParams->addUserData('customStyleUrl','https://srv1.shayanlms.com/custom.css');
         $joinMeetingParams->addUserData('autoJoin',true);
         $joinMeetingParams->addUserData('bbb_skip_check_audio',true);
-        $joinMeetingParams->addUserData('bbb_show_participants_on_login',false);
+//        $joinMeetingParams->addUserData('bbb_show_participants_on_login',false);
+//        $joinMeetingParams->addUserData('bbb_show_public_chat_on_login',true);
         if(!$meeting->isActiveMic) {
             $joinMeetingParams->addUserData('listenOnlyMode', true);
             $joinMeetingParams->addUserData('bbb_force_listen_only', true);

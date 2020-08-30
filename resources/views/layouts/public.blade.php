@@ -24,7 +24,7 @@
     <title>@yield('title') @lang('info.baseTitle')</title>
     <link rel="icon" type="image/png" href="assets/media/logos/favicon.ico" />
     @if(app()->getLocale()=='fa')
-        <link href="assets/css/fa.font.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/fa.font.css" rel="stylesheet" type="text/css" />
     @endif
     @yield('headMeta')
 </head>

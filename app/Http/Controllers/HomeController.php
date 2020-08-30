@@ -22,4 +22,14 @@ class HomeController extends Controller
         $packages=Packagesite::where('isActive',1)->get();
         return view('welcome',compact('packages'));
     }
+    public function page($slug){
+        if($slug=='contact'){
+            //TODO : send email
+            return view('contact');
+        }elseif($slug=='legal' ||$slug=='privacy' ){
+            return view('page',compact('slug'));
+        }else{
+            return abort(404);
+        }
+    }
 }

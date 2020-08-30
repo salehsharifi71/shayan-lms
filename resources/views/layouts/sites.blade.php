@@ -153,6 +153,60 @@ fanavaran novin jahani (fenj.ir)
                                         <!--begin::Wrapper-->
                                         <div class="d-flex justify-content-between flex-column h-100">
                                             <!--begin::Container-->
+                                            @if(Route::current()->getName() =='PublicClass')
+
+                                                <div class="h-100">
+                                                    <!--begin::Header-->
+                                                    <div class="d-flex flex-column flex-center">
+                                                        <!--begin::Image-->
+                                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-180px w-100" style="background-image: url(/assets/media/stock-600x400/img-70.jpg);">
+                                                            @if($meeting->logo)
+                                                                <img class="min-h-180px w-100 rounded" src="{{$meeting->logo}}">
+                                                            @endif
+                                                        </div>
+                                                        <!--end::Image-->
+
+                                                        <!--begin::Title-->
+                                                        <br>
+                                                        <hr>
+                                                    @auth('organizer')
+                                                        <div>
+                                                        @if(\App\Model\Organizer\ClientMeta::where('client_id',Auth::guard('organizer')->user()->id)->where('meta_key','meet')->where('meta_value',$meeting->hash)->first())
+                                                            @if($meeting->start_at < \Carbon\Carbon::now())
+                                                                @if($meeting->expired_at< \Carbon\Carbon::now())
+                                                                    <i class="far fa-calendar-alt"></i> @lang('info.expired')
+                                                                @else
+
+                                                                        <a href="{{route('joinMeeting',$meeting->hash)}}" class="btn btn-success btn-block">@lang('info.loginMeeting')</a>
+
+
+                                                                    @endif
+                                                            @else
+                                                                <i class="far fa-calendar-alt"></i> @lang('info.dontStartYet')
+                                                                 ( @lang('info.startAt') : {{$stringService->prettyNumber(jdate($meeting->start_at)->format('%d %B  %Y'))}} )
+                                                            @endif
+                                                        @else
+                                                                @if($meeting->signUpKind==2)
+                                                                    <a href="{{route('signUpMeeting')}}" class="btn btn-primary btn-block">@lang('info.signUp')</a>
+                                                                @else
+                                                                    @lang('info.privateMeeting')
+                                                                @endif
+
+                                                        @endif
+                                                        </div>
+                                                    @else
+                                                        <a href="{{route('login')}}?hash={{$meeting->hash}}" class="btn btn-success btn-block">@lang('info.signIn')</a>
+                                                        @if($meeting->signUpKind==2)
+                                                            <a href="{{route('register')}}?hash={{$meeting->hash}}" class="btn btn-primary btn-block">@lang('info.signUp')</a>
+                                                        @endif
+                                                    @endif
+                                                        <!--end::Title-->
+
+                                                    </div>
+                                                    <!--end::Header-->
+
+                                                </div>
+                                            @else
                                             <div class="h-100">
                                                 <!--begin::Header-->
                                                 <div class="d-flex flex-column flex-center">
@@ -175,6 +229,7 @@ fanavaran novin jahani (fenj.ir)
                                                 <!--end::Header-->
 
                                             </div>
+                                            @endif
                                             <!--eng::Container-->
 
                                             <!--begin::Footer-->

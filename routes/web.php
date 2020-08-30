@@ -19,6 +19,8 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
     Route::any('/login', 'Sites\AuthController@login')->name('login');
     Route::any('/register', 'Sites\AuthController@register')->name('register');
     Route::any('/dashboard', 'Sites\PanelController@dashboard')->name('siteDashboard');
+    Route::any('/signUpMeeting/{hash}', 'Sites\PanelController@signUpMeeting')->name('signUpMeeting');
+    Route::any('/joinMeeting/{hash}', 'Sites\PanelController@joinMeeting')->name('joinMeeting');
 }elseif(request()->server->get('HTTP_HOST')==env('APP_LTE')||request()->server->get('HTTP_HOST')=='127.0.0.1:8000') {
 
     Auth::routes(['verify' => true]);

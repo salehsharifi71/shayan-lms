@@ -29,7 +29,8 @@ class AuthController extends Controller
                 'password' => 'required'
             ]);
             if (Auth::guard('organizer')->attempt(['organizer_id'=>$organizer->id,'username' => request()->username, 'password' => request()->password],0)) {
-
+                if(request()->has('hash'))
+                    return redirect(route('PublicClass',request()->hash));
                 return redirect()->intended('/dashboard');
             }
 
@@ -60,7 +61,8 @@ class AuthController extends Controller
                 ]);
                 $client->save();
                 if (Auth::guard('organizer')->attempt(['organizer_id'=>$organizer->id,'username' => request()->username, 'password' => request()->password],0)) {
-
+                    if(request()->has('hash'))
+                        return redirect(route('signUpMeeting',request()->hash));
                     return redirect()->intended('/dashboard');
                 }
             }

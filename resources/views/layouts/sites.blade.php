@@ -78,18 +78,30 @@ fanavaran novin jahani (fenj.ir)
                                         </a>
 
                                     </li>
+                                    @auth('organizer')
+
+                                    <li class="menu-item menu-item-submenu menu-item-rel showMobOnly " >
+                                        <a href="{{route('siteDashboard')}}" style="margin: 5px;" class="menu-link btn btn-primary">
+                                            <span class="menu-text">@lang('info.dashboard')</span>
+                                            <span class="menu-desc"></span>
+                                        </a>
+                                    </li>
+                                    @else
+
+
                                     <li class="menu-item menu-item-submenu menu-item-rel showMobOnly" >
-                                        <a href="{{route('siteLogin')}}" style="margin: 5px;" class="menu-link btn btn-success">
+                                        <a href="{{route('login')}}" style="margin: 5px;" class="menu-link btn btn-success">
                                             <span class="menu-text">@lang('info.login')</span>
                                             <span class="menu-desc"></span>
                                         </a>
                                     </li>
                                     <li class="menu-item menu-item-submenu menu-item-rel showMobOnly " >
-                                        <a href="{{route('siteRegister')}}" style="margin: 5px;" class="menu-link btn btn-primary">
+                                        <a href="{{route('register')}}" style="margin: 5px;" class="menu-link btn btn-primary">
                                             <span class="menu-text">@lang('info.signUp')</span>
                                             <span class="menu-desc"></span>
                                         </a>
                                     </li>
+                                        @endauth
                                 </ul>
                                 <!--end::Header Nav-->
                             </div>
@@ -101,15 +113,21 @@ fanavaran novin jahani (fenj.ir)
 
                     <!--begin::Topbar-->
                     <div class="topbar">
-                            <a href="{{route('siteLogin')}}" style="margin: 20px 5px;height: 40px;top: 11px;" class="menu-link btn btn-success">
+                        @auth('organizer')
+                        <a href="{{route('siteDashboard')}}" style="margin: 20px 5px;height: 40px;top: 11px;" class="menu-link btn btn-success">
+                            <span class="menu-text">@lang('info.dashboard')</span>
+                            <span class="menu-desc"></span>
+                        </a>
+                        @else
+                            <a href="{{route('login')}}" style="margin: 20px 5px;height: 40px;top: 11px;" class="menu-link btn btn-success">
                                 <span class="menu-text">@lang('info.login')</span>
                                 <span class="menu-desc"></span>
                             </a>
-                            <a href="{{route('siteRegister')}}" style="margin: 20px 5px;height: 40px;top: 11px;" class="menu-link btn btn-primary">
+                            <a href="{{route('register')}}" style="margin: 20px 5px;height: 40px;top: 11px;" class="menu-link btn btn-primary">
                                 <span class="menu-text">@lang('info.signUp')</span>
                                 <span class="menu-desc"></span>
                             </a>
-
+                        @endif
                     </div>
                     <!--end::Topbar-->
                 </div>

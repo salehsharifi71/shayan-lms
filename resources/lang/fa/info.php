@@ -17,6 +17,7 @@ return [
     'sendMessage' => 'ارسال پیام',
     'phone' => 'شماره تماس',
     'subject' => 'موضوع',
+    'activeProgram' => 'برنامه های فعال',
     'yourMessage' => 'پیام شما',
     'visitHere' => 'مراجعه حضوری',
     'visitAddress' => 'کرمان ، زرند ، بلوار آیت الله هاشمی، حدفاصل ۱ و ۳',

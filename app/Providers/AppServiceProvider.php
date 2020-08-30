@@ -25,7 +25,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        if(request()->server->get('HTTP_HOST')!='127.0.0.1:8000')
+        if(request()->server->get('HTTP_HOST')=='127.0.0.1:8000'||request()->server->get('HTTP_HOST')=='salehman.shayanlms.com:8000'){
+
+        }else {
             URL::forceScheme('https');
+        }
     }
 }

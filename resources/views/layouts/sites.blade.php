@@ -176,13 +176,13 @@ fanavaran novin jahani (fenj.ir)
                                                                 @if($meeting->expired_at< \Carbon\Carbon::now())
                                                                     <i class="far fa-calendar-alt"></i> @lang('info.expired')
                                                                 @else
-                                                                    @if(!$open)
+                                                                    @if($open)
                                                                         <a href="{{route('joinMeeting',$meeting->hash)}}" class="btn btn-success btn-block"><i class="fas fa-video"></i> @lang('info.loginMeeting')</a>
                                                                     @else
                                                                             <i class="far fa-clock"></i> @lang('info.dontStartYetTime')
                                                                             (  {{$stringService->prettyNumber($meeting->openTime)}} - {{$stringService->prettyNumber($meeting->closeTime)}} )
 
-                                                                        @endif
+                                                                    @endif
 
                                                                 @endif
                                                             @else

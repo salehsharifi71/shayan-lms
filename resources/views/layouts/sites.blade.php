@@ -157,7 +157,7 @@ fanavaran novin jahani (fenj.ir)
                                                 <!--begin::Header-->
                                                 <div class="d-flex flex-column flex-center">
                                                     <!--begin::Image-->
-                                                    <div class="bgi-no-repeat bgi-size-cover rounded min-h-180px w-100" style="background-image: url(assets/media/stock-600x400/img-70.jpg);">
+                                                    <div class="bgi-no-repeat bgi-size-cover rounded min-h-180px w-100" style="background-image: url(/assets/media/stock-600x400/img-70.jpg);">
                                                         @if($organizer->logo)
                                                             <img class="min-h-180px w-100 rounded" src="{{$organizer->logo}}">
                                                         @endif

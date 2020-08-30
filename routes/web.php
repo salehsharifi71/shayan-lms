@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTTP_HOST'))->first()) {
     Route::get('/', 'Sites\SiteController@index')->name('PublicSite');
+    Route::get('/c/{hash}', 'Sites\SiteController@showClass')->name('PublicClass');
     Route::any('/login', 'Sites\AuthController@login')->name('login');
     Route::any('/register', 'Sites\AuthController@register')->name('register');
     Route::any('/dashboard', 'Sites\PanelController@dashboard')->name('siteDashboard');

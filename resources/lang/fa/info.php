@@ -16,6 +16,7 @@ return [
     'emailAdmin' => 'admin@shayanlms.com',
     'sendMessage' => 'ارسال پیام',
     'phone' => 'شماره تماس',
+    'view' => 'مشاهده',
     'subject' => 'موضوع',
     'activeProgram' => 'برنامه های فعال',
     'yourMessage' => 'پیام شما',

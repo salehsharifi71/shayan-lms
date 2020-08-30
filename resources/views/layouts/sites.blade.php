@@ -170,17 +170,21 @@ fanavaran novin jahani (fenj.ir)
                                                         <br>
                                                         <hr>
                                                     @auth('organizer')
-                                                        <div>
+                                                        <div style="width : 100%">
                                                         @if(\App\Model\Organizer\ClientMeta::where('client_id',Auth::guard('organizer')->user()->id)->where('meta_key','meet')->where('meta_value',$meeting->hash)->first())
                                                             @if($meeting->start_at < \Carbon\Carbon::now())
                                                                 @if($meeting->expired_at< \Carbon\Carbon::now())
                                                                     <i class="far fa-calendar-alt"></i> @lang('info.expired')
                                                                 @else
+                                                                    @if(!$open)
+                                                                        <a href="{{route('joinMeeting',$meeting->hash)}}" class="btn btn-success btn-block"><i class="fas fa-video"></i> @lang('info.loginMeeting')</a>
+                                                                    @else
+                                                                            <i class="far fa-clock"></i> @lang('info.dontStartYetTime')
+                                                                            (  {{$stringService->prettyNumber($meeting->openTime)}} - {{$stringService->prettyNumber($meeting->closeTime)}} )
 
-                                                                        <a href="{{route('joinMeeting',$meeting->hash)}}" class="btn btn-success btn-block">@lang('info.loginMeeting')</a>
+                                                                        @endif
 
-
-                                                                    @endif
+                                                                @endif
                                                             @else
                                                                 <i class="far fa-calendar-alt"></i> @lang('info.dontStartYet')
                                                                  ( @lang('info.startAt') : {{$stringService->prettyNumber(jdate($meeting->start_at)->format('%d %B  %Y'))}} )

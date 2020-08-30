@@ -37,6 +37,16 @@ class SiteController extends Controller
         $clientsId=Client::where('organizer_id',$organizer->id)->where('role',1)->get()->pluck('id');
         $teachers=ClientMeta::whereIn('client_id',$clientsId)->where('meta_key','meet')->where('meta_value',$hash)->get();
 
-        return view('sites.meeting',compact('organizer','meeting','teachers'));
+        $tz_obj = new \DateTimeZone(env('TIME_ZONE'));
+        $today = new \DateTime("now", $tz_obj);
+        $hour = $today->format('H');
+        $minitue = $today->format('i');
+        $startAt=explode(':',$meeting->openTime);
+        $closeAt=explode(':',$meeting->closeTime);
+        $open=false;
+        if(intval($startAt[0]) <= $hour && intval($closeAt[0]) >= $hour){
+            $open=true;
+        }
+        return view('sites.meeting',compact('organizer','meeting','teachers','open'));
     }
 }

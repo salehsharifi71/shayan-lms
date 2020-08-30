@@ -157,4 +157,5 @@ return [
     'poweredBy'=>'نیرو گرفته از : ',
     'signUpSuccess'=>'ثبت نام با موفقیت انجام شد',
     'dontStartYet'=>' تاریخ دوره هنوز شروع نشده است',
+    'dontStartYetTime'=>' هنوز کلاس/دوره باز نشده است',
 ];

@@ -14,7 +14,7 @@ class BBBController extends BigBlueButton
 {
 
     public function setBBB(){
-        $this->securitySecret   = 'jqSTYJF5TMMEVgcPf5wjotYp6DKVGXCjN6B5OuR5HX0';
+        $this->securitySecret   = 'Vw5NEYhrGsehIalmuSdVbnv06PnBVE1bAZ1HdoY';
         $this->bbbServerBaseUrl = 'https://srv2.shayanlms.com/bigbluebutton/';
         $this->urlBuilder       = new UrlBuilder($this->securitySecret, $this->bbbServerBaseUrl);
 
@@ -81,7 +81,7 @@ class BBBController extends BigBlueButton
         }
         $joinMeetingParams = new JoinMeetingParameters($meetingID, $name, '4321irmd98');
         $joinMeetingParams->setRedirect(true);
-//        $joinMeetingParams->addUserData('customStyleUrl','https://srv2.shayanlms.com/custom.css');
+//        $joinMeetingParams->addUserData('customStyleUrl','https://fenj.ir/bbb/html5.css');
         $joinMeetingParams->addUserData('bbb_display_branding_area',true);
         $joinMeetingParams->addUserData('listenOnlyMode',false);
         $joinMeetingParams->addUserData('autoJoin',true);

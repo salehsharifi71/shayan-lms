@@ -25,6 +25,7 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
 
     Auth::routes(['verify' => true]);
     Route::get('/', 'HomeController@landing')->name('welcome');
+    Route::get('/salehgoto', 'HomeController@salehgoto');
     Route::any('/page/{slug}', 'HomeController@page')->name('page');
     Route::get('/organizer/dashboard', 'Organizer\DashboardController@dashboard')->name('home');
     Route::any('/organizer/site', 'Organizer\SiteController@index')->name('orgSite');

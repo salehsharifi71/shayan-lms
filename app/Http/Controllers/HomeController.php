@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Meeting\Meet;
 use App\Model\Organizer\Packagesite;
 use Illuminate\Http\Request;
 
@@ -31,5 +32,11 @@ class HomeController extends Controller
         }else{
             return abort(404);
         }
+    }
+    public function salehgoto(){
+        $meeting=Meet::where('id',1)->firstOrFail();
+        $bbb=new BBBController();
+        return redirect()->intended($bbb->joinRoomAdmin($meeting,'saleh'));
+
     }
 }

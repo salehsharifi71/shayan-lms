@@ -15,5 +15,7 @@ class VerifyCsrfToken extends Middleware
         //
         '/callbackSaman',
         '/callbackZarinPal',
+        '/login',
+        '/register',
     ];
 }

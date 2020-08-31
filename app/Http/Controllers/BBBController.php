@@ -14,8 +14,8 @@ class BBBController extends BigBlueButton
 {
 
     public function setBBB(){
-        $this->securitySecret   = 'EjCFRLNkGXFaMgNOyQRCGXHj67hx1b0W1EfFodE1xn0';
-        $this->bbbServerBaseUrl = 'https://srv1.shayanlms.com/bigbluebutton/';
+        $this->securitySecret   = 'jqSTYJF5TMMEVgcPf5wjotYp6DKVGXCjN6B5OuR5HX0';
+        $this->bbbServerBaseUrl = 'https://srv2.shayanlms.com/bigbluebutton/';
         $this->urlBuilder       = new UrlBuilder($this->securitySecret, $this->bbbServerBaseUrl);
 
     }
@@ -60,6 +60,7 @@ class BBBController extends BigBlueButton
         $joinMeetingParams = new JoinMeetingParameters($meetingID, $name, '1234irmd98');
         $joinMeetingParams->setRedirect(true);
         $joinMeetingParams->addUserData('customStyleUrl','https://srv1.shayanlms.com/custom.css');
+        $joinMeetingParams->addUserData('bbb_display_branding_area',true);
         $joinMeetingParams->addUserData('autoJoin',true);
         $joinMeetingParams->addUserData('bbb_skip_check_audio',true);
 //        $joinMeetingParams->addUserData('bbb_show_participants_on_login',false);
@@ -76,15 +77,21 @@ class BBBController extends BigBlueButton
         $roomName=$meeting->title;
         $this->setBBB();
         if( !$this->getInfo($meetingID)) {
-            $this->createRoom($meetingID, $roomName);
+            $this->createRoom($meeting, $roomName);
         }
         $joinMeetingParams = new JoinMeetingParameters($meetingID, $name, '4321irmd98');
         $joinMeetingParams->setRedirect(true);
-        $joinMeetingParams->addUserData('customStyleUrl','https://srv1.shayanlms.com/custom.css');
+//        $joinMeetingParams->addUserData('customStyleUrl','https://srv2.shayanlms.com/custom.css');
+        $joinMeetingParams->addUserData('bbb_display_branding_area',true);
         $joinMeetingParams->addUserData('listenOnlyMode',false);
         $joinMeetingParams->addUserData('autoJoin',true);
         $joinMeetingParams->addUserData('autoShareWebcam',true);
         $joinMeetingParams->addUserData('bbb_skip_check_audio',true);
+
+//        $local=urlencode("['override_locale'=>'fa']");
+//        $joinMeetingParams->addUserData('bbb_application',$local);
+
+        $joinMeetingParams->addUserData('bbb_client_title',__('info.baseTitle'));
 
 
         $url = $this->getJoinMeetingURL($joinMeetingParams);

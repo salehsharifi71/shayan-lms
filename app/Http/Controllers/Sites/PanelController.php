@@ -61,7 +61,10 @@ class PanelController extends Controller
             }else{
                 if($open){
                     $bbb=new BBBController();
-                    $url =$bbb->joinRoom($meeting,$client->name);
+                    if($client->role==1)
+                        $url =$bbb->joinRoomAdmin($meeting,$client->name);
+                    else
+                        $url =$bbb->joinRoom($meeting,$client->name);
                     return redirect()->intended($url);
                 }else{
                     return redirect(route('PublicClass',$hash))->withErrors(['error'=>__('info.dontStartYetTime')]);

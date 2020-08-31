@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Organizer;
 
+use App\Http\Controllers\BBBController;
 use App\Http\Controllers\Controller;
 use App\Model\Meeting\Meet;
 use App\Model\Organizer\Client;
@@ -232,6 +233,14 @@ class ClassController extends Controller
             }
         }
         return json_encode(array('result'=>'ok','msg'=>__('info.saveChange')));
+
+    }
+    public function quickLogin($id){
+        $user = auth()->user();
+        $meet=Meet::where('user_id',$user->id)->where('hash',$id)->firstOrFail();
+        $bbb=new BBBController();
+        $url =$bbb->joinRoomAdmin($meet,$user->name);
+        return redirect()->intended($url);
 
     }
 }

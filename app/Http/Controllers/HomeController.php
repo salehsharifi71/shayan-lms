@@ -36,6 +36,9 @@ class HomeController extends Controller
     public function salehgoto(){
         $meeting=Meet::where('id',1)->firstOrFail();
         $bbb=new BBBController();
+        if(request()->has('user'))
+            return redirect()->intended($bbb->joinRoom($meeting,'saleh'));
+
         return redirect()->intended($bbb->joinRoomAdmin($meeting,'saleh'));
 
     }

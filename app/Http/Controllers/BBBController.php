@@ -59,7 +59,7 @@ class BBBController extends BigBlueButton
 
         $joinMeetingParams = new JoinMeetingParameters($meetingID, $name, '1234irmd98');
         $joinMeetingParams->setRedirect(true);
-//        $joinMeetingParams->addUserData('customStyleUrl','https://srv1.shayanlms.com/custom.css');
+        $joinMeetingParams->addUserData('customStyleUrl','https://fenj.ir/bbb/htmle.css');
         $joinMeetingParams->addUserData('bbb_display_branding_area',true);
         $joinMeetingParams->addUserData('autoJoin',true);
         $joinMeetingParams->addUserData('bbb_skip_check_audio',true);
@@ -81,7 +81,7 @@ class BBBController extends BigBlueButton
         }
         $joinMeetingParams = new JoinMeetingParameters($meetingID, $name, '4321irmd98');
         $joinMeetingParams->setRedirect(true);
-//        $joinMeetingParams->addUserData('customStyleUrl','https://fenj.ir/bbb/html5.css');
+        $joinMeetingParams->addUserData('customStyleUrl','https://fenj.ir/bbb/htmle.css');
         $joinMeetingParams->addUserData('bbb_display_branding_area',true);
         $joinMeetingParams->addUserData('listenOnlyMode',false);
         $joinMeetingParams->addUserData('autoJoin',true);

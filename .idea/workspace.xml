@@ -4,8 +4,6 @@
     <list default="true" id="ab2af323-d10d-4151-b812-f2f098e3411c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BBBController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BBBController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Sites/PanelController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Sites/PanelController.php" />
     </list>
     <ignored path="public/myup/" />
     <ignored path=".idea/" />
@@ -57,8 +55,8 @@
       <file leaf-file-name="BBBController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BBBController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="78" lean-forward="false" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+            <state relative-caret-position="160">
+              <caret line="62" column="41" lean-forward="false" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
               <folding>
                 <element signature="e#40#72#0#PHP" expanded="true" />
               </folding>
@@ -128,7 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>payment</find>
       <find>@media</find>
       <find>showMobOnly</find>
       <find>siteLogin</find>
@@ -158,6 +155,7 @@
       <find>UrlBuilder</find>
       <find>signUpMeeting</find>
       <find>quickLogin</find>
+      <find>customStyleUrl</find>
     </findStrings>
     <replaceStrings>
       <replace>telsupport</replace>
@@ -622,7 +620,7 @@
       <workItem from="1598333723659" duration="47727000" />
       <workItem from="1598617758814" duration="7047000" />
       <workItem from="1598676065549" duration="8315000" />
-      <workItem from="1598700616889" duration="31320000" />
+      <workItem from="1598700616889" duration="31687000" />
     </task>
     <task id="LOCAL-00001" summary="add theme">
       <created>1597750220251</created>
@@ -904,11 +902,18 @@
       <option name="project" value="LOCAL" />
       <updated>1598809008523</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="اتصال به بیگ بلو">
+      <created>1598862495472</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1598862495472</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178839000" />
+    <option name="totallyTimeSpent" value="179206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1573,8 +1578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BBBController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="78" lean-forward="false" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+        <state relative-caret-position="160">
+          <caret line="62" column="41" lean-forward="false" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
           <folding>
             <element signature="e#40#72#0#PHP" expanded="true" />
           </folding>

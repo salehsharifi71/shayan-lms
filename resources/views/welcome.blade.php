@@ -130,42 +130,74 @@
             <div class="section-title">
                 <h2>@lang('info.pricing')</h2>
                 <div class="bar"></div>
-                <p>@lang('info.pricingPackage').</p>
+                <p>@lang('info.otherPossibilitiesHint') .</p>
+                <p>@lang('info.customizePack') .</p>
             </div>
             <div class="row">
-                @foreach($packages as $package)
+                {{--@foreach($packages as $package)--}}
 
-                <div class="col-lg-4 col-md-6 @if($loop->index==2) offset-lg-0 offset-md-3 @endif">
+                {{--<div class="col-lg-4 col-md-6 @if($loop->index==2) offset-lg-0 offset-md-3 @endif">--}}
+                    {{--<div class="pricingTable">--}}
+                        {{--<div style="position: absolute;top: -40px;left: calc(50% - 32px)"><img src="assets/media/svg/package/{{$package->logo}}.svg"></div>--}}
+                        {{--<div class="price-Value"><span class="currency"></span>{{$stringService->prettyNumber(number_format($package->price))}}</div>--}}
+                        {{--<span class="month" style="display:block">@lang('info.packagePerYear')</span>--}}
+                        {{--<div class="pricingHeader"><h3 class="title">{{$package->title}}</h3></div>--}}
+                        {{--<div class="pricing-content">--}}
+                            {{--<ul>--}}
+                                {{--@if($package->id==1)--}}
+                                    {{--<li class="active">@lang('info.twoMFree')</li>--}}
+                                {{--@endif--}}
+                                    {{--<li class="active">--}}
+                                        {{--<span class="font-weight-boldest">@lang('info.pUser') : </span>--}}
+                                        {{--<span>{{$stringService->prettyNumber(number_format($package->userLimit))}} نفر</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li class="active">--}}
+                                        {{--<span class="font-weight-boldest">@lang('info.wage') : </span>--}}
+                                        {{--<span>{{$stringService->prettyNumber($package->wage)}} %</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li class="active">--}}
+                                        {{--<span class="font-weight-boldest">@lang('info.pTicket') : </span>--}}
+                                        {{--<span>{{$package->support}}</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li class="active">--}}
+                                        {{--<span class="font-weight-boldest">@lang('info.pTel') : </span>--}}
+                                        {{--<span>@if($package->telsupport){{$package->telsupport}} @else <i class="flaticon-close"></i> @lang('info.dontHave') @endif</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li class="active">--}}
+                                        {{--<span class="font-weight-boldest">@lang('info.pDomainTitle') : </span>--}}
+                                        {{--<span>@if($package->domain) @lang('info.pDomain') @else @lang('info.pSubDomain')  @endif</span>--}}
+                                    {{--</li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
+                        {{--<a href="{{route('register')}}" class="btn btn-primary">@lang('info.signUp')</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--@endforeach--}}
+                @foreach($packages as $package)
+                <div class="col-lg-4 col-md-6 @if($loop->index==2) offset-lg-0 offset-md-3 @endif ">
                     <div class="pricingTable">
-                        <div style="position: absolute;top: -40px;left: calc(50% - 32px)"><img src="assets/media/svg/package/{{$package->logo}}.svg"></div>
-                        <div class="price-Value"><span class="currency"></span>{{$stringService->prettyNumber(number_format($package->price))}}</div>
-                        <span class="month" style="display:block">@lang('info.packagePerYear')</span>
-                        <div class="pricingHeader"><h3 class="title">{{$package->title}}</h3></div>
+                        <div class="pricing-icon">
+                            <i class="{{$package['img']}}"></i>
+                        </div>
+                        <div class="price-Value"><span class="currency"></span>@if($package['price']==0) @lang('info.free') @else {{$stringService->prettyNumber(number_format($package['price']))}} @endif</div>
+                        <span class="month" style="display:block">@if($package['price']==0) @lang('info.twoMFree') @else @lang('info.packagePerMonth') @endif</span>
+                        <div class="pricingHeader"><h3 class="title">{{$package['title']}}</h3></div>
                         <div class="pricing-content">
                             <ul>
-                                @if($package->id==1)
-                                    <li class="active">@lang('info.twoMFree')</li>
-                                @endif
-                                    <li class="active">
-                                        <span class="font-weight-boldest">@lang('info.pUser') : </span>
-                                        <span>{{$stringService->prettyNumber(number_format($package->userLimit))}} نفر</span>
-                                    </li>
-                                    <li class="active">
-                                        <span class="font-weight-boldest">@lang('info.wage') : </span>
-                                        <span>{{$stringService->prettyNumber($package->wage)}} %</span>
-                                    </li>
-                                    <li class="active">
-                                        <span class="font-weight-boldest">@lang('info.pTicket') : </span>
-                                        <span>{{$package->support}}</span>
-                                    </li>
-                                    <li class="active">
-                                        <span class="font-weight-boldest">@lang('info.pTel') : </span>
-                                        <span>@if($package->telsupport){{$package->telsupport}} @else <i class="flaticon-close"></i> @lang('info.dontHave') @endif</span>
-                                    </li>
-                                    <li class="active">
-                                        <span class="font-weight-boldest">@lang('info.pDomainTitle') : </span>
-                                        <span>@if($package->domain) @lang('info.pDomain') @else @lang('info.pSubDomain')  @endif</span>
-                                    </li>
+
+                                <li class="active">
+                                    <span class="font-weight-boldest">@lang('info.pUser') : </span>
+                                    <span>{{$stringService->prettyNumber(number_format($package['maxUser']))}} @lang('info.person')</span>
+                                </li>
+                                <li @if($package['isActiveMic']) class="active" @endif>
+                                    <span>@lang('info.isActiveMic')</span>
+                                </li>
+                                <li @if($package['isActiveWebcam']) class="active" @endif>
+                                    <span>@lang('info.isActiveWebcam')</span>
+                                </li>
+                                <li @if($package['isActiveHalfPrice']) class="active" @endif>
+                                    <span>@lang('info.isActiveHalfPrice')</span>
+                                </li>
                             </ul>
                         </div>
                         <a href="{{route('register')}}" class="btn btn-primary">@lang('info.signUp')</a>
@@ -174,11 +206,11 @@
                 @endforeach
             </div>
 
-            <div class="section-title"><br>
-                <h2>@lang('info.pricingClass')</h2>
-                <div class="bar"></div>
-                <p>@lang('info.pricingClassDes').</p>
-            </div>
+            {{--<div class="section-title"><br>--}}
+                {{--<h2>@lang('info.pricingClass')</h2>--}}
+                {{--<div class="bar"></div>--}}
+                {{--<p>@lang('info.pricingClassDes').</p>--}}
+            {{--</div>--}}
         </div>
     </section>
 

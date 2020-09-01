@@ -89,6 +89,7 @@ return [
     'signUpKind' => 'نوع ثبت نام دوره',
     'privateMeeting' => 'دوره خصوصی',
     'time' => 'زمان ',
+    'firstClass' => 'اولین کلاس',
     'startTime' => 'ساعت شروع ',
     'closeTime' => 'ساعت پایان ',
     'startAt' => 'تاریخ شروع ',

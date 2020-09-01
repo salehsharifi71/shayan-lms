@@ -37,8 +37,7 @@ class BBBController extends BigBlueButton
         $createMeetingParams->setWelcomeMessage('سلام خوش آمدید');
         $createMeetingParams->setCopyright('shayanLMS :)');
         if(!$meeting->isActiveWebcam)
-            $createMeetingParams->setLockSettingsDisableCam(true);
-        $createMeetingParams->setMuteOnStart(true);
+            $createMeetingParams->setWebcamsOnlyForModerator(true);
 
 
         $response = $this->createMeeting($createMeetingParams);
@@ -61,8 +60,8 @@ class BBBController extends BigBlueButton
         $joinMeetingParams->setRedirect(true);
         $joinMeetingParams->addUserData('customStyleUrl','https://fenj.ir/bbb/htmle.css');
         $joinMeetingParams->addUserData('bbb_display_branding_area',true);
-        $joinMeetingParams->addUserData('autoJoin',true);
         $joinMeetingParams->addUserData('bbb_skip_check_audio',true);
+//        $joinMeetingParams->setRedirect(false);
 //        $joinMeetingParams->addUserData('bbb_show_participants_on_login',false);
 //        $joinMeetingParams->addUserData('bbb_show_public_chat_on_login',true);
         if(!$meeting->isActiveMic) {

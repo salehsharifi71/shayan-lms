@@ -53,6 +53,11 @@
                             <a href="{{route('page','contact')}}" class="nav-link ">@lang('info.contact')</a>
 
                         </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('demo')}}" class="nav-link ">@lang('info.freeDemo')</a>
+
+                        </li>
                         {{--<li class="nav-item">--}}
                         @auth
 

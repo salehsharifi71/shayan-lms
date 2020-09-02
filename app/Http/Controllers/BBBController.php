@@ -16,6 +16,8 @@ class BBBController extends BigBlueButton
     public function setBBB(){
         $this->securitySecret   = 'Vw5NEYhrGsehIalmuSdVbnv06PnBVE1bAZ1HdoY';
         $this->bbbServerBaseUrl = 'https://srv2.shayanlms.com/bigbluebutton/';
+//        $this->securitySecret   = 'rRUDXXZnkrvJbMiCbAXCXWWxyas9pDFhJvHVnHBEGZE';
+//        $this->bbbServerBaseUrl = 'https://srv4.shayanlms.com/bigbluebutton/';
         $this->urlBuilder       = new UrlBuilder($this->securitySecret, $this->bbbServerBaseUrl);
 
     }
@@ -34,7 +36,10 @@ class BBBController extends BigBlueButton
         $createMeetingParams->setLockSettingsLockedLayout(true);
         $createMeetingParams->setLockSettingsDisableNote(true);
         $createMeetingParams->setLogo('https://shayanlms.com/assets/publicTheme/img/logo2.png');
-        $createMeetingParams->setWelcomeMessage('سلام خوش آمدید');
+        if($meeting->isActiveHalfPrice)
+            $createMeetingParams->setWelcomeMessage('سلام خوش آمدید <br> تعرفه شما به صورت <strong>نیم بها</strong> محاسبه خواهد شد');
+        else
+            $createMeetingParams->setWelcomeMessage('سلام خوش آمدید');
         $createMeetingParams->setCopyright('shayanLMS :)');
         if(!$meeting->isActiveWebcam)
             $createMeetingParams->setWebcamsOnlyForModerator(true);

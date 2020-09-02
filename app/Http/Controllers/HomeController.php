@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Meeting\Demo;
 use App\Model\Meeting\Meet;
 use App\Model\Organizer\Packagesite;
 use Illuminate\Http\Request;
@@ -74,5 +75,24 @@ class HomeController extends Controller
 
         return redirect()->intended($bbb->joinRoomAdmin($meeting,'saleh'));
 
+    }
+    public function demo(){
+        if(request()->has('email')){
+            if($demo=Demo::where('email',request()->email)->first()){
+                $demo->qty=$demo->qty+1;
+                $demo->save();
+            }else{
+                $demo = Demo::firstOrNew([
+                    'email'=>request()->email
+                ]);
+            }
+            $demo->save();
+
+            $meeting=Meet::where('id',1)->firstOrFail();
+            $bbb=new BBBController();
+            $name= explode('@',request()->email);
+            return redirect()->intended($bbb->joinRoomAdmin($meeting,$name[0]));
+        }
+        return view('demo');
     }
 }

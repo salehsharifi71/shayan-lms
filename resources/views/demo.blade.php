@@ -1,0 +1,44 @@
+@extends('layouts.public')
+@section('publicContent')
+
+    <!-- Start Page Title Area -->
+    <section class="page-title-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>@lang('info.freeDemo')</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="shape1"><img src="/assets/publicTheme/img/shape1.png" alt="img"></div>
+        <div class="shape2"><img src="/assets/publicTheme/img/shape2.png" alt="img"></div>
+        <div class="shape3"><img src="/assets/publicTheme/img/shape3.png" alt="img"></div>
+        <div class="shape6"><img src="/assets/publicTheme/img/shape6.png" alt="img"></div>
+        <div class="shape8 rotateme"><img src="/assets/publicTheme/img/shape8.svg" alt="shape"></div>
+        <div class="shape9"><img src="/assets/publicTheme/img/shape9.svg" alt="shape"></div>
+
+    </section>
+    <!-- End Page Title Area -->
+    <section class="get-started ptb-100">
+        <div class="container">
+
+            <div class="get-started-form">
+
+                @lang('largText.demo')
+<br>
+<br>
+                <form action="" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="@lang('info.email')">
+                    </div>
+                    <button type="submit" class="btn btn-primary">@lang('info.view')</button>
+                </form>
+            </div>
+        </div>
+
+        <canvas id="canvas" width="915" height="699"></canvas>
+    </section>
+
+@endsection

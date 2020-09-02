@@ -63,7 +63,6 @@ class SiteOrgCreate
         $meet->signUpKind = 2;
         $meet->save();
         $this->logdb->sendLog('SYSTEM_MAKE_CLASS','  کلاس جدید ساخته شد',$user->id);
-
         return $orgnaizer;
     }
     public function checkDomain($domain,$uid){

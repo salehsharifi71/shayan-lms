@@ -120,7 +120,7 @@
         <div class="container">
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-7 col-md-7"><p>@lang('info.wantSee')</p></div>
-                <div class="col-lg-5 col-md-5 text-right"><a href="{{route('register')}}" class="btn btn-primary">@lang('info.freeSignUp')</a></div>
+                <div class="col-lg-5 col-md-5 text-right"><a href="{{route('demo')}}" class="btn btn-primary">@lang('info.freeDemo')</a></div>
             </div>
         </div>
     </div>

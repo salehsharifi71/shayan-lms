@@ -90,7 +90,6 @@ class HomeController extends Controller
         if(strlen($name)<2){
             $name='مهمان';
         }
-        $name= 'salam';
         $bbb=new BBBController();
 //        return '<iframe=src="'.$bbb->joinRoomAdmin($meet,$name).'" width="100%" height="100%">';
         return redirect()->intended($bbb->joinRoomAdmin($meet,$name));

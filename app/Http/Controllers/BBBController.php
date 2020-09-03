@@ -14,10 +14,10 @@ class BBBController extends BigBlueButton
 {
 
     public function setBBB(){
-        $this->securitySecret   = 'Vw5NEYhrGsehIalmuSdVbnv06PnBVE1bAZ1HdoY';
-        $this->bbbServerBaseUrl = 'https://srv2.shayanlms.com/bigbluebutton/';
-//        $this->securitySecret   = 'rRUDXXZnkrvJbMiCbAXCXWWxyas9pDFhJvHVnHBEGZE';
-//        $this->bbbServerBaseUrl = 'https://srv4.shayanlms.com/bigbluebutton/';
+//        $this->securitySecret   = 'Vw5NEYhrGsehIalmuSdVbnv06PnBVE1bAZ1HdoY';
+//        $this->bbbServerBaseUrl = 'https://srv2.shayanlms.com/bigbluebutton/';
+        $this->securitySecret   = 'fbBDm42Z3xFfFIx6phxG6koqTGDmCAMF5fuvIuHUk';
+        $this->bbbServerBaseUrl = 'https://srv4.shayanlms.com/bigbluebutton/';
         $this->urlBuilder       = new UrlBuilder($this->securitySecret, $this->bbbServerBaseUrl);
 
     }

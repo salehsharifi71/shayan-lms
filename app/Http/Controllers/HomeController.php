@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Model\Meeting\Demo;
+use App\Model\Meeting\HashMeeting;
 use App\Model\Meeting\Meet;
 use App\Model\Organizer\Packagesite;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -75,6 +77,21 @@ class HomeController extends Controller
 
         return redirect()->intended($bbb->joinRoomAdmin($meeting,'saleh'));
 
+    }
+    public function directAccess($hash){
+        $meetHash=HashMeeting::where('hash',$hash)->where('isActive',1)->firstOrFail();
+        $meet=Meet::where('id',$meetHash->meet_id)->firstOrFail();
+        if($meetHash->user_id){
+            $user=User::where('id',$meetHash->user_id)->firstOrFail();
+            $name=$user->name;
+        }else{
+            $name=$meetHash->name;
+        }
+        if(strlen($name)<2){
+            $name='مهمان';
+        }
+        $bbb=new BBBController();
+        return redirect()->intended($bbb->joinRoomAdmin($meet,$name));
     }
     public function demo(){
         if(request()->has('email')){

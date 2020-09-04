@@ -167,4 +167,5 @@ return [
     'landingPack1'=>'دوره رایگان',
     'landingPack2'=>'دوره معمولی',
     'landingPack3'=>'دوره / وبینار بزرگ',
+    'sendMessageSuccess'=>'پیام شما با موفقیت ارسال شد',
 ];

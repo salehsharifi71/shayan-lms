@@ -62,6 +62,20 @@ class HomeController extends Controller
     public function page($slug){
         if($slug=='contact'){
             //TODO : send email
+            if(request()->has('message')){
+                $text='name : '. request()->name .'
+email : '.request()->email.'
+phone : '.request()->phone.'
+subject : '.request()->subject.'
+-------------------------
+
+'.request()->message;
+
+                $text=urlencode($text);
+                $post = "https://api.telegram.org/bot142679334:AAESZv1iyhsdSpyjVs38wSU9IczcHzTYK3M/sendMessage?text=$text&chat_id=123969916";
+                 file_get_contents($post);
+                 return redirect(route('page','contact'))->with(['success'=>__('info.sendMessageSuccess')]);
+            }
             return view('contact');
         }elseif($slug=='legal' ||$slug=='privacy' ){
             return view('page',compact('slug'));

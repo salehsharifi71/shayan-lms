@@ -75,37 +75,41 @@
                 </div>
 
                 <div class="col-lg-6 col-md-12">
-                    <form id="contactForm" method="post">
+                    @if(session()->has('success'))
+                        <div class="alert alert-success"> {{ session()->get('success') }} </div>
+                    @endif
+                    <form  action="" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" required data-error="Please enter your name" placeholder="@lang('info.placeholderName')">
+                                    <input name="name" type="text" class="form-control" required data-error="Please enter your name" placeholder="@lang('info.placeholderName')">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" required data-error="Please enter your email" placeholder="@lang('info.email')">
+                                    <input type="email" name="email" class="form-control" required data-error="Please enter your email" placeholder="@lang('info.email')">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="@lang('info.phone')">
+                                    <input type="text" class="form-control" name="phone" placeholder="@lang('info.phone')">
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="@lang('info.subject')">
+                                    <input type="text" class="form-control" name="subject" placeholder="@lang('info.subject')">
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5" required data-error="Write your message" placeholder="@lang('info.yourMessage')"></textarea>
+                                    <textarea name="message" class="form-control" id="message"  cols="30" rows="5" required data-error="Write your message" placeholder="@lang('info.yourMessage')"></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>

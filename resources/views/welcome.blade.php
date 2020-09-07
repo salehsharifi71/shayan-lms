@@ -213,5 +213,71 @@
             {{--</div>--}}
         </div>
     </section>
+    <section class="get-started ptb-100">
+        <div class="container">
+            <div class="section-title">
+                <h2>@lang('info.meetingInIndex')</h2>
+                <div class="bar"></div>
+                <p>@lang('info.meetingInIndexDes')</p>
+            </div>
+            <div class="overview-box">
+                <div class="row h-100 justify-content-center align-items-center">
+                    <div class="col-lg-6 col-md-6 overview-img">
+                        <img src="assets/media/img/first.png" alt="@lang('info.meetingInIndex')">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 overview-content">
+                        <div class="icon">
+                            <i class="icofont-power"></i>
+                        </div>
+                        @lang('largText.aboutMeeting1')
+                    </div>
+                </div>
+            </div>
+            <div class="overview-box">
+                <div class="row h-100 justify-content-center align-items-center">
+                    <div class="col-lg-6 col-md-6 overview-content">
+                        <div class="icon">
+                            <i class="icofont-anchor"></i>
+                        </div>
+                        @lang('largText.aboutMeeting2')
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 app-fetured-item">
+                        <div class="app-item item-one">
+                            <i class="icofont-wink-smile"></i>
+                            <h6>@lang('info.future1')</h6>
+                        </div>
+
+                        <div class="app-item item-two">
+                            <i class="icofont-ebook"></i>
+                            <h6>@lang('info.future4')</h6>
+                        </div>
+
+                        <div class="app-item item-three">
+                            <i class="icofont-wink-smile"></i>
+                            <h6>@lang('info.future2')</h6>
+                        </div>
+
+                        <div class="app-item item-four">
+                            <i class="icofont-stock-mobile"></i>
+                            <h6>@lang('info.future3')</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="canvas" width="990" height="746"></canvas>
+    </section>
+
+    <div class="cta-area">
+        <div class="container">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-7 col-md-7"><p>@lang('info.wantSee')</p></div>
+                <div class="col-lg-5 col-md-5 text-right"><a href="{{route('demo')}}" class="btn btn-primary">@lang('info.freeDemo')</a></div>
+            </div>
+        </div>
+    </div>
 
 @endsection

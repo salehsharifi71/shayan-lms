@@ -1,6 +1,6 @@
 @extends('layouts.panel')
-@section('title') @if($id==0 ) @lang('info.addNewClass') @else @lang('info.editClass') @endif | @endsection
-@section('subheader')  @if($id==0 ) @lang('info.addNewClass') @else @lang('info.editClass') @endif @endsection
+@section('title') @if($id===0 ) @lang('info.addNewClass') @else @lang('info.editClass') @endif | @endsection
+@section('subheader')  @if($id===0 ) @lang('info.addNewClass') @else @lang('info.editClass') @endif @endsection
 @section('style')
 <style>
     .bootstrap-timepicker-widget{
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-        @if($id==0)
+        @if($id===0)
                 <div class="alert alert-warning" role="alert">
                     @lang('info.staticSettingDes')
                 </div>
@@ -273,7 +273,7 @@
                 minDate: 'today',
             });
         });
-        @if($id==0)
+        @if($id===0)
 function calcPrice() {
     var userPrice={{env('USER_PRICE')}};
     var userMic={{env('USER_MIC')}};

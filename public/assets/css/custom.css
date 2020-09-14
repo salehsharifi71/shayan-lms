@@ -3,6 +3,10 @@
     .showMobOnly{display:none!important;}
 }
 
+@media (max-width: 980px){
+    .addinMob{display:block!important;}
+}
+
 .imgSchool{
     width:100%;
     min-height: 180px !important;

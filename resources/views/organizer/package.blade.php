@@ -1,6 +1,7 @@
 @extends('layouts.panel')
 @section('title') @lang('info.changePackage') | @endsection
 @section('subheader') @lang('info.changePackage') @endsection
+
 @section('panelContent')
     @inject('stringService', 'App\Services\StringService')
     <div class="d-flex flex-column-fluid">
@@ -21,7 +22,7 @@
                 <div class="d-none d-lg-block  position-absolute w-100 h-100"></div>
                 <!-- end: Custom background-->
                 <div class="col-11" style="display: block;">
-                    <div class="row">
+                    <div class="row addinMob" >
                         @foreach($packages as $package)
 
                         <!-- begin: Pricing-->
@@ -85,7 +86,7 @@
                 </div>
             </div>
             <div class="row justify-content-center mx-0 mb-15 d-none d-lg-flex">
-                <div class="col-11">
+                <div class="col-md-12">
                     <!-- begin: Bottom Table-->
 
                         <div class="row bg-gray-100 py-5 font-weight-bold text-center">
@@ -116,18 +117,23 @@
 
                     <!-- end: Bottom Table-->
                 </div>
+
             </div>
+            <div class="row" style="display:none">
+                <div class="col-md-12">
+                    <br>
+                    <div class="alert alert-custom alert-notice alert-light-info fade show" role="alert">
+                        <div class="alert-icon"><i class="flaticon-warning"></i></div>
+                        <div class="alert-text">
+
+                            @lang('info.packageAlert')
+                        </div>
+
+                    </div>
 
 
-            <div class="alert alert-custom alert-notice alert-light-info fade show" role="alert">
-                <div class="alert-icon"><i class="flaticon-warning"></i></div>
-                <div class="alert-text">
-
-                    @lang('info.packageAlert')
                 </div>
-
             </div>
-
 
         </div>
     </div>

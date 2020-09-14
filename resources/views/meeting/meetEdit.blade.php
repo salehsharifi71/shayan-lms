@@ -11,7 +11,7 @@
     }
 </style>
 <link href="assets/css/pdate/persian-datepicker.min.css" rel="stylesheet" type="text/css" />
-
+<!-- {{ $id }}-->
 
 @endsection
 @section('panelContent')

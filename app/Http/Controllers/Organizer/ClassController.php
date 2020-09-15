@@ -27,7 +27,7 @@ class ClassController extends Controller
     }
     public function classWebinarEdit($id, Logdb $logdb){
         $user = auth()->user();
-        if($id===0){
+        if($id==0){
             $meet=new Meet();
             if(request()->has('title')) {
                 $this->validate(request(), [

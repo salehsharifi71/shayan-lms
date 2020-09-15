@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab2af323-d10d-4151-b812-f2f098e3411c" name="Default" comment="افزودن مطلب به صفحه اول">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/iframe.blade.php" />
+    <list default="true" id="ab2af323-d10d-4151-b812-f2f098e3411c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php" afterPath="$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <ignored path="public/myup/" />
     <ignored path=".idea/" />
@@ -73,38 +71,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClassController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            <state relative-caret-position="240">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="e#403#479#0#PHP" expanded="false" />
                 <element signature="e#484#707#0#PHP" expanded="false" />
-                <element signature="e#4974#6645#0#PHP" expanded="false" />
-                <element signature="e#6650#7543#0#PHP" expanded="false" />
-                <element signature="e#7548#8454#0#PHP" expanded="false" />
-                <element signature="e#8459#9352#0#PHP" expanded="false" />
-                <element signature="e#9357#10266#0#PHP" expanded="false" />
-                <element signature="e#10271#10555#0#PHP" expanded="false" />
+                <element signature="e#5034#6705#0#PHP" expanded="false" />
+                <element signature="e#6710#7603#0#PHP" expanded="false" />
+                <element signature="e#7608#8514#0#PHP" expanded="false" />
+                <element signature="e#8519#9412#0#PHP" expanded="false" />
+                <element signature="e#9417#10326#0#PHP" expanded="false" />
+                <element signature="e#10331#10615#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="meetEdit.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="meetEdit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+            <state relative-caret-position="1328">
+              <caret line="144" column="120" lean-forward="false" selection-start-line="144" selection-start-column="118" selection-end-line="144" selection-end-column="120" />
               <folding>
-                <element signature="e#908#1020#0#HTML" expanded="true" />
-                <element signature="e#1079#1113#0#HTML" expanded="true" />
-                <element signature="e#3989#4012#0#HTML" expanded="true" />
-                <element signature="e#4977#5000#0#HTML" expanded="true" />
-                <element signature="e#6839#6862#0#HTML" expanded="true" />
-                <element signature="e#9429#9451#0#HTML" expanded="true" />
-                <element signature="e#9626#9647#0#HTML" expanded="true" />
+                <element signature="e#916#1028#0#HTML" expanded="true" />
+                <element signature="e#1087#1121#0#HTML" expanded="true" />
+                <element signature="e#3997#4020#0#HTML" expanded="true" />
+                <element signature="e#4985#5008#0#HTML" expanded="true" />
+                <element signature="e#6851#6874#0#HTML" expanded="true" />
+                <element signature="e#9441#9463#0#HTML" expanded="true" />
+                <element signature="e#9638#9659#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,7 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>دسترسی</find>
       <find>inja</find>
       <find>UrlBuilder</find>
       <find>quickLogin</find>
@@ -183,6 +180,7 @@
       <find>$id==</find>
       <find>title</find>
       <find>===</find>
+      <find>==</find>
     </findStrings>
     <replaceStrings>
       <replace>telsupport</replace>
@@ -193,6 +191,7 @@
       <replace>register</replace>
       <replace>$id===0</replace>
       <replace>==</replace>
+      <replace>$id=='new'</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -250,8 +249,8 @@
         <option value="$PROJECT_DIR$/public/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/resources/lang/fa/info.php" />
         <option value="$PROJECT_DIR$/app/Services/Logdb.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" />
         <option value="$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php" />
       </list>
     </option>
   </component>
@@ -865,14 +864,7 @@
       <workItem from="1600085451005" duration="2716000" />
       <workItem from="1600099975722" duration="3614000" />
       <workItem from="1600150517241" duration="74000" />
-      <workItem from="1600158400201" duration="1436000" />
-    </task>
-    <task id="LOCAL-00017" summary="اصلاح هدر سایت">
-      <created>1598447224103</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1598447224103</updated>
+      <workItem from="1600158400201" duration="2936000" />
     </task>
     <task id="LOCAL-00018" summary="افزودن سایت کاربر">
       <created>1598451026811</created>
@@ -1210,11 +1202,18 @@
       <option name="project" value="LOCAL" />
       <updated>1600107914984</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="افزودن مطلب به صفحه اول">
+      <created>1600160695735</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1600160695736</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227918000" />
+    <option name="totallyTimeSpent" value="229418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1579,14 +1578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/organizer/package.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1637,35 +1628,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/organizer/package.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding>
-            <element signature="e#403#479#0#PHP" expanded="false" />
-            <element signature="e#484#707#0#PHP" expanded="false" />
-            <element signature="e#4974#6645#0#PHP" expanded="false" />
-            <element signature="e#6650#7543#0#PHP" expanded="false" />
-            <element signature="e#7548#8454#0#PHP" expanded="false" />
-            <element signature="e#8459#9352#0#PHP" expanded="false" />
-            <element signature="e#9357#10266#0#PHP" expanded="false" />
-            <element signature="e#10271#10555#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="480">
+          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/meeting/meetEdit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+        <state relative-caret-position="1328">
+          <caret line="144" column="120" lean-forward="false" selection-start-line="144" selection-start-column="118" selection-end-line="144" selection-end-column="120" />
           <folding>
-            <element signature="e#908#1020#0#HTML" expanded="true" />
-            <element signature="e#1079#1113#0#HTML" expanded="true" />
-            <element signature="e#3989#4012#0#HTML" expanded="true" />
-            <element signature="e#4977#5000#0#HTML" expanded="true" />
-            <element signature="e#6839#6862#0#HTML" expanded="true" />
-            <element signature="e#9429#9451#0#HTML" expanded="true" />
-            <element signature="e#9626#9647#0#HTML" expanded="true" />
+            <element signature="e#916#1028#0#HTML" expanded="true" />
+            <element signature="e#1087#1121#0#HTML" expanded="true" />
+            <element signature="e#3997#4020#0#HTML" expanded="true" />
+            <element signature="e#4985#5008#0#HTML" expanded="true" />
+            <element signature="e#6851#6874#0#HTML" expanded="true" />
+            <element signature="e#9441#9463#0#HTML" expanded="true" />
+            <element signature="e#9638#9659#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="e#403#479#0#PHP" expanded="false" />
+            <element signature="e#484#707#0#PHP" expanded="false" />
+            <element signature="e#5034#6705#0#PHP" expanded="false" />
+            <element signature="e#6710#7603#0#PHP" expanded="false" />
+            <element signature="e#7608#8514#0#PHP" expanded="false" />
+            <element signature="e#8519#9412#0#PHP" expanded="false" />
+            <element signature="e#9417#10326#0#PHP" expanded="false" />
+            <element signature="e#10331#10615#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

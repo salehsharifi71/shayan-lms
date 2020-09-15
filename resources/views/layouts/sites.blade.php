@@ -191,7 +191,7 @@ fanavaran novin jahani (fenj.ir)
                                                             @endif
                                                         @else
                                                                 @if($meeting->signUpKind==2)
-                                                                    <a href="{{route('signUpMeeting')}}" class="btn btn-primary btn-block">@lang('info.signUp')</a>
+                                                                    <a href="{{route('signUpMeeting',$meeting->hash)}}" class="btn btn-primary btn-block">@lang('info.signUp')</a>
                                                                 @else
                                                                     @lang('info.privateMeeting')
                                                                 @endif

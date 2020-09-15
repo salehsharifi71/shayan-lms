@@ -6,14 +6,17 @@
 
     <div class="col-md-12">
     <div class="row">
-        <div class="col-xl-6">
+        <div class="col-xl-12">
             <!--begin::Tiles Widget 13-->
-            <div class="card card-custom bgi-no-repeat bgi-no-repeat bgi-size-cover gutter-b" style="height: 150px; background-image: url(@if(Auth::user()->Organizer->logo){{Auth::user()->Organizer->logo}}@else assets/media/stock-600x400/img-70.jpg @endif)">
+            <div class="card card-custom bgi-no-repeat bgi-no-repeat bgi-size-cover gutter-b" style="height: 175px; background-color: #663259; background-position: 100% calc(100% + 0.5rem) ; background-size: 100% auto; background-image: url(/assets/media/svg/patterns/image.png)">
                 <!--begin::Body-->
                 <div class="card-body d-flex align-items-center">
                     <div>
-
-                        <a href="http://{{Auth::user()->Organizer->domain}}" class="btn btn-success font-weight-bold px-6 py-3">@lang('info.seeWebSite')</a>
+                        <p style="color: white">
+                            @lang('info.seeWebSiteDet')
+                            {{Auth::user()->Organizer->domain}}
+                        </p>
+                        <a target="_blank" href="http://{{Auth::user()->Organizer->domain}}" class="btn btn-success font-weight-bold px-6 py-3">@lang('info.seeWebSite')</a>
                     </div>
                 </div>
                 <!--end::Body-->
@@ -64,21 +67,21 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-6">
-            <!--begin::Mixed Widget 14-->
-            <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b card-stretch" >
-                <!--begin::Body-->
-                <div class="card-body d-flex flex-column align-items-start justify-content-start">
-                    <div class="p-1 flex-grow-1 text-center">
-                        <a href="https://fenj.ir/order/1" target="_blank">
-                        <img src="assets/media/img/ads.png" width="100%">
-                        </a>
-                    </div>
-                </div>
-                <!--end::Body-->
-            </div>
-            <!--end::Mixed Widget 14-->
-        </div>
+        {{--<div class="col-xl-6">--}}
+            {{--<!--begin::Mixed Widget 14-->--}}
+            {{--<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b card-stretch" >--}}
+                {{--<!--begin::Body-->--}}
+                {{--<div class="card-body d-flex flex-column align-items-start justify-content-start">--}}
+                    {{--<div class="p-1 flex-grow-1 text-center">--}}
+                        {{--<a href="https://fenj.ir/order/1" target="_blank">--}}
+                        {{--<img src="assets/media/img/ads.png" width="100%">--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!--end::Body-->--}}
+            {{--</div>--}}
+            {{--<!--end::Mixed Widget 14-->--}}
+        {{--</div>--}}
     </div>
     </div>
 @endsection

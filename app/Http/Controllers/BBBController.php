@@ -35,11 +35,16 @@ class BBBController extends BigBlueButton
         $createMeetingParams->setAutoStartRecording(false);
         $createMeetingParams->setLockSettingsLockedLayout(true);
         $createMeetingParams->setLockSettingsDisableNote(true);
+        $createMeetingParams->setMuteOnStart(true);
+        if(!$meeting->isActiveMic) {
+            $createMeetingParams->setAllowModsToUnmuteUsers(false);
+        }else
+            $createMeetingParams->setAllowModsToUnmuteUsers(true);
         $createMeetingParams->setLogo('https://shayanlms.com/assets/publicTheme/img/logo2.png');
-        if($meeting->isActiveHalfPrice)
+//        if($meeting->isActiveHalfPrice)
             $createMeetingParams->setWelcomeMessage('سلام خوش آمدید <br> تعرفه شما به صورت <strong>نیم بها</strong> محاسبه خواهد شد');
-        else
-            $createMeetingParams->setWelcomeMessage('سلام خوش آمدید');
+//        else
+//            $createMeetingParams->setWelcomeMessage('سلام خوش آمدید');
         $createMeetingParams->setCopyright('shayanLMS :)');
         if(!$meeting->isActiveWebcam)
             $createMeetingParams->setWebcamsOnlyForModerator(true);
@@ -69,6 +74,8 @@ class BBBController extends BigBlueButton
 //        $joinMeetingParams->setRedirect(false);
 //        $joinMeetingParams->addUserData('bbb_show_participants_on_login',false);
 //        $joinMeetingParams->addUserData('bbb_show_public_chat_on_login',true);
+        $joinMeetingParams->addUserData('autoJoin',true);
+        $joinMeetingParams->addUserData('listenOnlyMode', true);
         if(!$meeting->isActiveMic) {
             $joinMeetingParams->addUserData('listenOnlyMode', true);
             $joinMeetingParams->addUserData('bbb_force_listen_only', true);

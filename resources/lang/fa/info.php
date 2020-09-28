@@ -55,6 +55,10 @@ return [
     'inputDescription' => 'توضیحات',
     'orgSite' => 'ویرایش سایت',
     'siteAdmin' => 'مدیریت سایت',
+    'articles' => 'مقالات',
+    'addNewArticle' => 'مقاله/خبر جدید',
+    'editArticle' => 'ویرایش مقاله / خبر',
+    'publishDate' => 'زمان انتشار',
     'seeWebSite' => 'مشاهده وبسایت',
     'seeWebSiteDet' => 'برای شما یک <strong>وبسایت اختصاصی</strong> آماده شده است
 <br> تمامی جلسات  شما در این سایت برگزار خواهند شد<br>',

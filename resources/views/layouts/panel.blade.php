@@ -129,6 +129,15 @@
                                                         </a>
                                                     </li>
                                                     <li class="menu-item  menu-item-submenu"  data-menu-toggle="hover" aria-haspopup="true">
+                                                        <a  href="{{route('articles')}}" class="menu-link ">
+                                          <span class="svg-icon menu-icon">
+                                             <i class="fas fa-blog"></i>
+                                              <!--end::Svg Icon-->
+                                          </span>
+                                                            <span class="menu-text">@lang('info.articles')</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item  menu-item-submenu"  data-menu-toggle="hover" aria-haspopup="true">
                                                         <a  href="http://{{Auth::user()->Organizer->domain}}" target="_blank" class="menu-link ">
                                           <span class="svg-icon menu-icon">
                                              <i class="fas fa-globe"></i>
@@ -801,6 +810,12 @@
                                                 <a href="{{route('orgClassEdit',0)}}" class="navi-link">
                                                     <span class="navi-icon"><i class="fas fa-chalkboard"></i></span>
                                                     <span class="navi-text">@lang('info.addNewClass')</span>
+                                                </a>
+                                            </li>
+                                            <li class="navi-item">
+                                                <a href="{{route('articleEdit',0)}}" class="navi-link">
+                                                    <span class="navi-icon"><i class="fas fa-blog"></i></span>
+                                                    <span class="navi-text">@lang('info.addNewArticle')</span>
                                                 </a>
                                             </li>
                                             {{--<li class="navi-separator my-3"></li>--}}

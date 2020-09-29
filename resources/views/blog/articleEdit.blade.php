@@ -60,7 +60,7 @@
 
                 <div class="form-group">
                     <label>@lang('info.publishDate') <span class="text-danger">*</span></label>
-                    <input type="text" id="mydate" name="publishDate" value="{{ jdate($article->created_at)->format('%Y/%m/%d') }}" class="form-control initial-value-example" required="">
+                    <input type="text" id="mydate" name="publishDate" value="{{ jdate($article->created_at)->format('%Y/%m/%d %H:i') }}" class="form-control initial-value-example" required="">
                 </div>
 
                     <button type="submit" class="btn btn-success btn-lg " > @lang('info.save')</button>

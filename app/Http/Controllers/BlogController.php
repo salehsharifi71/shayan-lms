@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Blog;
+use App\Services\MainService;
 use App\Services\StringService;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,7 @@ class BlogController extends Controller
             $article=Blog::where('user_id',$user->id)->where('id',$id)->firstOrFail();
         }
         if(request()->has('title')){
+            $mainService=new MainService();
             $this->validate(request(), [
                 'title' => 'required',
                 'description' => 'required',
@@ -34,10 +36,10 @@ class BlogController extends Controller
             if(strlen($pdate[1])<3){
                 $sTime= "09:00";
             }else{
-                $sTime= $pdate[1];
+                $sTime= $mainService->convertNumbersToEnglish($pdate[1]);
             }
-            $publishDate = \Morilog\Jalali\CalendarUtils::createCarbonFromFormat('Y/m/d H:i', $pdate[0].' '.$sTime);
-return $publishDate;
+
+            $publishDate = \Morilog\Jalali\CalendarUtils::createCarbonFromFormat('Y/m/d H:i', $mainService->convertNumbersToEnglish($pdate[0]).' '.$sTime);
             $article->title=request()->title;
             $article->description=request()->description;
             $article->meta_description=request()->meta_description;
@@ -54,6 +56,7 @@ return $publishDate;
                 $article->thumb = $photoName;
             }
             $article->save();
+            return redirect(route('articles'))->with(['success' => __('info.saveChange')]);
 
         }
         return view('blog.articleEdit',compact('article','user','id'));

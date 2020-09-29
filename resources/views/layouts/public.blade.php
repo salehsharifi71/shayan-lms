@@ -27,6 +27,15 @@
         <link href="/assets/css/fa.font.css" rel="stylesheet" type="text/css" />
     @endif
     @yield('headMeta')
+<!-- shayanlms  - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179271998-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-179271998-1');
+    </script>
 </head>
 <body>
 <div class="preloader-area"><div class="lds-hourglass"></div></div>

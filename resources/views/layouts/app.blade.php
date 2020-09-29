@@ -22,6 +22,15 @@ fanavaran novin jahani (fenj.ir)
     @endif
     @yield('style')
     @yield('headScript')
+<!-- shayanlms  - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179271998-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-179271998-1');
+    </script>
     @if(config('app.direction')=='rtl')
 
         <link href="assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />

@@ -21,6 +21,7 @@ class BlogController extends Controller
         $user = auth()->user();
         if($id==0){
             $article=new Blog();
+            $article->created_at=date('Y/m/d H:i');
         }else{
             $article=Blog::where('user_id',$user->id)->where('id',$id)->firstOrFail();
         }
@@ -29,7 +30,6 @@ class BlogController extends Controller
             $this->validate(request(), [
                 'title' => 'required',
                 'description' => 'required',
-                'publishDate' => 'required',
                 'thumb' => 'mimes:jpeg,png,jpg,gif'
             ]);
             $pdate=explode(" ",request()->publishDate);

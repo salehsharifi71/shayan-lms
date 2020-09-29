@@ -58,7 +58,7 @@
                     <textarea class="form-control" name="meta_description" id="meta_description">{!! $article->meta_description!!}</textarea>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" @if($user->role==0) style="display: none" @endif>
                     <label>@lang('info.publishDate') <span class="text-danger">*</span></label>
                     <input type="text" id="mydate" name="publishDate" value="{{ jdate($article->created_at)->format('%Y/%m/%d %H:i') }}" class="form-control initial-value-example" required="">
                 </div>

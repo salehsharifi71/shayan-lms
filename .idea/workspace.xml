@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab2af323-d10d-4151-b812-f2f098e3411c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/MainService.php" />
+    <list default="true" id="ab2af323-d10d-4151-b812-f2f098e3411c" name="Default" comment="امکان تنظیم زمان فقط برای مدیر">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/blog/articleEdit.blade.php" afterPath="$PROJECT_DIR$/resources/views/blog/articleEdit.blade.php" />
@@ -32,31 +31,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articleEdit.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="articleEdit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/blog/articleEdit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="62" column="130" lean-forward="false" selection-start-line="62" selection-start-column="130" selection-end-line="62" selection-end-column="130" />
+            <state relative-caret-position="180">
+              <caret line="60" column="88" lean-forward="false" selection-start-line="60" selection-start-column="88" selection-end-line="60" selection-end-column="88" />
               <folding>
                 <element signature="e#870#990#0#HTML" expanded="true" />
                 <element signature="e#2705#2746#0#HTML" expanded="true" />
-                <marker date="1601357270231" expanded="true" signature="4010:5654" ph="..." />
-                <marker date="1601357270231" expanded="true" signature="4081:5489" ph="..." />
-                <marker date="1601357270231" expanded="true" signature="4193:4665" ph="..." />
-                <marker date="1601357270231" expanded="true" signature="4753:4956" ph="..." />
-                <marker date="1601357270231" expanded="true" signature="5583:5629" ph="..." />
-                <marker date="1601357270231" expanded="true" signature="5743:6260" ph="..." />
-                <marker date="1601357270231" expanded="true" signature="5755:6247" ph="..." />
+                <element signature="e#3093#3134#0#HTML" expanded="true" />
+                <marker date="1601357338720" expanded="true" signature="4059:5703" ph="..." />
+                <marker date="1601357338720" expanded="true" signature="4130:5538" ph="..." />
+                <marker date="1601357338720" expanded="true" signature="4242:4714" ph="..." />
+                <marker date="1601357338720" expanded="true" signature="4802:5005" ph="..." />
+                <marker date="1601357338720" expanded="true" signature="5632:5678" ph="..." />
+                <marker date="1601357338720" expanded="true" signature="5792:6309" ph="..." />
+                <marker date="1601357338720" expanded="true" signature="5804:6296" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlogController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BlogController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BlogController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state relative-caret-position="165">
+              <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
               <folding>
                 <element signature="e#40#59#0#PHP" expanded="true" />
               </folding>
@@ -77,8 +77,8 @@
       <file leaf-file-name="ClassController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="14" column="6" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state relative-caret-position="200">
+              <caret line="87" column="34" lean-forward="false" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -132,9 +132,9 @@
       <find>مدیریت سای</find>
       <find>valida</find>
       <find>organizer_id</find>
+      <find>meeti</find>
       <find>persianDatepicker</find>
       <find>startAt</find>
-      <find>meeti</find>
     </findStrings>
     <replaceStrings>
       <replace>telsupport</replace>
@@ -203,8 +203,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Model/Blog.php" />
         <option value="$PROJECT_DIR$/app/Services/MainService.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" />
         <option value="$PROJECT_DIR$/resources/views/blog/articleEdit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" />
       </list>
     </option>
   </component>
@@ -850,14 +850,7 @@
       <workItem from="1600158400201" duration="3640000" />
       <workItem from="1600173707325" duration="7728000" />
       <workItem from="1600409509868" duration="1714000" />
-      <workItem from="1601297824279" duration="8943000" />
-    </task>
-    <task id="LOCAL-00024" summary="درگاه پرداخت زرین پال">
-      <created>1598634525200</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1598634525200</updated>
+      <workItem from="1601297824279" duration="9092000" />
     </task>
     <task id="LOCAL-00025" summary="درگاه پرداخت زرین پال">
       <created>1598636434506</created>
@@ -1195,11 +1188,18 @@
       <option name="project" value="LOCAL" />
       <updated>1601356792623</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="تصحیح ذخیره نوشته جدید">
+      <created>1601357299616</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1601357299617</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248507000" />
+    <option name="totallyTimeSpent" value="248656000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1243,7 +1243,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="افزودن مدرس به کلاس" />
     <MESSAGE value="اصلاح هدر سایت" />
     <MESSAGE value="افزودن سایت کاربر" />
     <MESSAGE value="صفحه اول سایت" />
@@ -1268,7 +1267,8 @@
     <MESSAGE value="دیتابیس بلاگ&#10;" />
     <MESSAGE value="لیست مقالات نمایش در مدیریت" />
     <MESSAGE value="اپدیت کمپوزر - افزودن اسلاگیبل-ارسال مطلب با اشکال در قسمت تاریخ" />
-    <option name="LAST_COMMIT_MESSAGE" value="اپدیت کمپوزر - افزودن اسلاگیبل-ارسال مطلب با اشکال در قسمت تاریخ" />
+    <MESSAGE value="تصحیح ذخیره نوشته جدید" />
+    <option name="LAST_COMMIT_MESSAGE" value="تصحیح ذخیره نوشته جدید" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1631,29 +1631,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="81" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BlogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
-          <folding>
-            <element signature="e#40#59#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1667,18 +1649,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/blog/articleEdit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="62" column="130" lean-forward="false" selection-start-line="62" selection-start-column="130" selection-end-line="62" selection-end-column="130" />
+        <state relative-caret-position="180">
+          <caret line="60" column="88" lean-forward="false" selection-start-line="60" selection-start-column="88" selection-end-line="60" selection-end-column="88" />
           <folding>
             <element signature="e#870#990#0#HTML" expanded="true" />
             <element signature="e#2705#2746#0#HTML" expanded="true" />
-            <marker date="1601357270231" expanded="true" signature="4010:5654" ph="..." />
-            <marker date="1601357270231" expanded="true" signature="4081:5489" ph="..." />
-            <marker date="1601357270231" expanded="true" signature="4193:4665" ph="..." />
-            <marker date="1601357270231" expanded="true" signature="4753:4956" ph="..." />
-            <marker date="1601357270231" expanded="true" signature="5583:5629" ph="..." />
-            <marker date="1601357270231" expanded="true" signature="5743:6260" ph="..." />
-            <marker date="1601357270231" expanded="true" signature="5755:6247" ph="..." />
+            <element signature="e#3093#3134#0#HTML" expanded="true" />
+            <marker date="1601357338720" expanded="true" signature="4059:5703" ph="..." />
+            <marker date="1601357338720" expanded="true" signature="4130:5538" ph="..." />
+            <marker date="1601357338720" expanded="true" signature="4242:4714" ph="..." />
+            <marker date="1601357338720" expanded="true" signature="4802:5005" ph="..." />
+            <marker date="1601357338720" expanded="true" signature="5632:5678" ph="..." />
+            <marker date="1601357338720" expanded="true" signature="5792:6309" ph="..." />
+            <marker date="1601357338720" expanded="true" signature="5804:6296" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Organizer/ClassController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="87" column="34" lean-forward="false" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding>
+            <element signature="e#40#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

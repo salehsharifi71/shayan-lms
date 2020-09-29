@@ -64,37 +64,17 @@
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/public.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/panel.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sites.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/sites.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3860">
-              <caret line="193" column="115" lean-forward="false" selection-start-line="193" selection-start-column="115" selection-end-line="193" selection-end-column="115" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -911,14 +891,7 @@
       <workItem from="1600173707325" duration="7728000" />
       <workItem from="1600409509868" duration="1714000" />
       <workItem from="1601297824279" duration="9125000" />
-      <workItem from="1601394752761" duration="373000" />
-    </task>
-    <task id="LOCAL-00027" summary="درگاه پرداخت زرین پال">
-      <created>1598686219201</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1598686219201</updated>
+      <workItem from="1601394752761" duration="1037000" />
     </task>
     <task id="LOCAL-00028" summary="درگاه پرداخت زرین پال">
       <created>1598686319597</created>
@@ -1256,11 +1229,18 @@
       <option name="project" value="LOCAL" />
       <updated>1601394963499</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="گوگل انالیتیکس">
+      <created>1601395171136</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1601395171136</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249062000" />
+    <option name="totallyTimeSpent" value="249726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1304,7 +1284,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="صفحه اول سایت" />
     <MESSAGE value="درگاه پرداخت زرین پال" />
     <MESSAGE value="پرداخت پکیج" />
     <MESSAGE value="سایت کاربران" />
@@ -1329,7 +1308,8 @@
     <MESSAGE value="تصحیح ذخیره نوشته جدید" />
     <MESSAGE value="امکان تنظیم زمان فقط برای مدیر" />
     <MESSAGE value="خاموش کردن ارسال پیام به تلگرام" />
-    <option name="LAST_COMMIT_MESSAGE" value="خاموش کردن ارسال پیام به تلگرام" />
+    <MESSAGE value="گوگل انالیتیکس" />
+    <option name="LAST_COMMIT_MESSAGE" value="گوگل انالیتیکس" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1708,10 +1688,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/public.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/sites.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="3620">
+          <caret line="193" column="115" lean-forward="false" selection-start-line="193" selection-start-column="115" selection-end-line="193" selection-end-column="115" />
           <folding />
         </state>
       </provider>
@@ -1724,18 +1704,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/public.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/sites.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3860">
-          <caret line="193" column="115" lean-forward="false" selection-start-line="193" selection-start-column="115" selection-end-line="193" selection-end-column="115" />
+        <state relative-caret-position="374">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>

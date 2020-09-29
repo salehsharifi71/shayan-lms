@@ -30,8 +30,8 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
     Route::any('/meet/{hash}', 'HomeController@directAccess')->name('directAccess');
     Route::any('/joinIframe/{hash}', 'HomeController@joinIframe')->name('joinIframe');
     Route::any('/page/{slug}', 'HomeController@page')->name('page');
-    Route::any('/organizer/articles/', 'BlogController@articles')->name('articles');
-    Route::any('/organizer/article/{id}', 'BlogController@edit')->name('articleEdit');
+    Route::any('/organizer/articles/', 'BlogController@articles')->name('articles')->middleware('auth');
+    Route::any('/organizer/article/{id}', 'BlogController@edit')->name('articleEdit')->middleware('auth');
     Route::any('/blog/', 'BlogController@index')->name('blogIndex');
     Route::any('/blog/{slug}', 'BlogController@single')->name('blogSingle');
     Route::get('/organizer/dashboard', 'Organizer\DashboardController@dashboard')->name('home');

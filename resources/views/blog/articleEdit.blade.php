@@ -51,9 +51,16 @@
 
                     <textarea name="description" id="kt-ckeditor-1">{!! $article->description!!}</textarea>
                 </div>
+
+                <div class="form-group" @if($user->role==0) style="display: none" @endif>
+                    <label for="meta_description">@lang('info.inputDescription') seo<span class="text-danger">*</span></label><br>
+
+                    <textarea class="form-control" name="meta_description" id="meta_description">{!! $article->meta_description!!}</textarea>
+                </div>
+
                 <div class="form-group">
                     <label>@lang('info.publishDate') <span class="text-danger">*</span></label>
-                    <input type="text" id="mydate" name="start_at" value="{{ jdate($article->created_at)->format('%Y/%m/%d') }}" class="form-control initial-value-example" required="">
+                    <input type="text" id="mydate" name="publishDate" value="{{ jdate($article->created_at)->format('%Y/%m/%d') }}" class="form-control initial-value-example" required="">
                 </div>
 
                     <button type="submit" class="btn btn-success btn-lg " > @lang('info.save')</button>
@@ -137,13 +144,18 @@
         $(document).ready(function() {
             $("#mydate").persianDatepicker({
                 altField: '#mydate',
-                altFormat: "YYYY/MM/DD",
+                altFormat: "YYYY/MM/DD HH:mm",
                 observer: true,
-                format: 'YYYY/MM/DD',
+                format: 'YYYY/MM/DD HH:mm',
                 initialValue: false,
                 initialValueType: 'persian',
                 autoClose: true,
-                minDate: 'today',
+                timePicker: {
+                enabled: true,
+                    meridiem: {
+                    enabled: true
+                }
+            }
             });
         });
 

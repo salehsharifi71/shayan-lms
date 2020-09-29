@@ -22,9 +22,9 @@ class Logdb
         $log->user_id=$user;
         $log->ip=\Request::ip();
         $log->save();
-        if($log->ip!='127.0.0.1') {
-            $post = "https://api.telegram.org/bot142679334:AAESZv1iyhsdSpyjVs38wSU9IczcHzTYK3M/sendMessage?text=$tag&chat_id=123969916";
-            file_get_contents($post);
-        }
+//        if($log->ip!='127.0.0.1') {
+//            $post = "https://api.telegram.org/bot142679334:AAESZv1iyhsdSpyjVs38wSU9IczcHzTYK3M/sendMessage?text=$tag&chat_id=123969916";
+//            file_get_contents($post);
+//        }
     }
 }

@@ -29,10 +29,8 @@
             <tr>
                 <td>{{$article->title}}</td>
                 <td>{{$stringService->prettyNumber(jdate($article->created_at)->format('%d %B  %Y'))}}</td>
-
                <td>
-                        <a href="{{route('makePayment',['id'=>'a','kind'=>'1'])}}"><button class="btn btn-success btn-sm"> <i class="fas fa-dollar-sign"></i> @lang('info.pay')</button> </a>
-
+                        <a href="{{route('articleEdit',$article->id)}}"><button class="btn btn-success btn-sm"> <i class="fas fa-edit"></i> @lang('info.editArticle')</button> </a>
                 </td>
             </tr>
         @endforeach

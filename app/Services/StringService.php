@@ -45,4 +45,19 @@ class StringService
 
         return $txt;
     }
+    public  function getSlice($html,$char,$addText='...')
+    {
+        $string=strip_tags($html);
+        $getlength=strlen($string);
+
+        if ($getlength > $char) {
+            $end=$char/100*20;
+            $text= substr($string, 0, strrpos($string, ' ', $char-$end));
+            $text.=$addText;
+        } else {
+            $text= $string;
+        }
+        return $text;
+
+    }
 }

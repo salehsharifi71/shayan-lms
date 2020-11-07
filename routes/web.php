@@ -33,7 +33,7 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
     Route::any('/organizer/articles/', 'BlogController@articles')->name('articles')->middleware('auth');
     Route::any('/organizer/article/{id}', 'BlogController@edit')->name('articleEdit')->middleware('auth');
     Route::any('/blog/', 'BlogController@index')->name('blogIndex');
-    Route::any('/blog/{slug}', 'BlogController@single')->name('blogSingle');
+    Route::any('/blog/{blog}', 'BlogController@single')->name('blogSingle');
     Route::get('/organizer/dashboard', 'Organizer\DashboardController@dashboard')->name('home');
     Route::any('/organizer/site', 'Organizer\SiteController@index')->name('orgSite');
     Route::get('/organizer/package', 'Organizer\SiteController@package')->name('orgPackage');

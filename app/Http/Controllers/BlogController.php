@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\Blog;
 use App\Services\MainService;
 use App\Services\StringService;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,7 +14,7 @@ class BlogController extends Controller
 
     public function articles(){
         $user = auth()->user();
-        $articles=Blog::where('user_id',$user->id)->orderByRaw('id DESC')->paginate(15);
+        $articles=Blog::where('user_id',$user->id)->where('isDeleted',0)->orderByRaw('id DESC')->paginate(15);
         return view('blog.articles',compact('articles','user'));
     }
     public function edit($id)
@@ -60,5 +61,14 @@ class BlogController extends Controller
 
         }
         return view('blog.articleEdit',compact('article','user','id'));
+    }
+    public function index(){
+        $articles=Blog::where('organizer_id',0)->where('isDeleted',0)->where('created_at','<',Carbon::now())->orderByRaw('id DESC')->paginate(15);
+        return view('blog.shayanArticles',compact('articles'));
+    }
+    public function single(Blog $blog){
+        $article=$blog;
+        $articles=Blog::where('organizer_id',0)->where('isDeleted',0)->where('created_at','<',Carbon::now())->orderByRaw('id DESC')->paginate(5);
+        return view('blog.shayanArticle',compact('article','articles'));
     }
 }

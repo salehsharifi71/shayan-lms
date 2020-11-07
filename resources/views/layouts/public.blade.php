@@ -4,6 +4,7 @@
     <!--
     Mohammad Saleh Sharifi (salehsharifi.ir)
     fanavaran novin jahani (fenj.ir)
+    webShayan (webShayan.ir)
     -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -66,6 +67,10 @@
 
                         <li class="nav-item">
                             <a href="{{route('demo')}}" class="nav-link ">@lang('info.freeDemo')</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('blogIndex')}}" class="nav-link ">@lang('info.blog')</a>
 
                         </li>
                         {{--<li class="nav-item">--}}

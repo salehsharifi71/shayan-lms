@@ -243,6 +243,7 @@ class ClassController extends Controller
         $meet=Meet::where('user_id',$user->id)->where('hash',$id)->firstOrFail();
         $bbb=new BBBController();
         $url =$bbb->joinRoomAdmin($meet,$user->name);
+        return view('iframe',compact('url'));
         return redirect()->intended($url);
 
     }

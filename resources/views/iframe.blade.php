@@ -1,5 +1,5 @@
 @extends('layouts.public')
-@section('title') {{$name}} @endsection
+@section('title')  @endsection
 @section('headMeta') <style>.footer-area{display:none}</style> @endsection
 @section('publicContent')
 
@@ -27,7 +27,7 @@
     <!-- End Page Title Area -->
 
     <!-- Start Contact Info Area -->
-    <iframe id="showClass" allow="microphone *; camera *; display-capture *" allowfullscreen="" data-hj-allow-iframe="" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="{{route('joinIframe',['hash'=>$hash,'name'=>$name])}}" webkitallowfullscreen=""></iframe>
+    <iframe id="showClass" allow="microphone *; camera *; display-capture *" allowfullscreen="" data-hj-allow-iframe="" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="{{$url}}" webkitallowfullscreen=""></iframe>
 
     <!-- End Contact Info Area -->
 @endsection

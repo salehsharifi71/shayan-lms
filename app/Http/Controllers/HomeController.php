@@ -87,9 +87,10 @@ subject : '.request()->subject.'
         $meeting=Meet::where('id',1)->firstOrFail();
         $bbb=new BBBController();
         if(request()->has('user'))
-            return redirect()->intended($bbb->joinRoom($meeting,'saleh'));
+            $url=$bbb->joinRoom($meeting,'saleh');
 
-        return redirect()->intended($bbb->joinRoomAdmin($meeting,'saleh'));
+        $url=$bbb->joinRoomAdmin($meeting,'saleh');
+        return view('iframe',compact('url'));
 
     }
     public function directAccess($hash){
@@ -106,7 +107,8 @@ subject : '.request()->subject.'
         }
         $bbb=new BBBController();
 //        return '<iframe=src="'.$bbb->joinRoomAdmin($meet,$name).'" width="100%" height="100%">';
-        return redirect()->intended($bbb->joinRoomAdmin($meet,$name));
+        $url=$bbb->joinRoomAdmin($meet,$name);
+        return view('iframe',compact('url'));
     }
     public function demo(){
         if(request()->has('email')){
@@ -119,10 +121,11 @@ subject : '.request()->subject.'
                 ]);
             }
             $demo->save();
-
             $meeting=Meet::where('id',1)->firstOrFail();
             $bbb=new BBBController();
             $name= explode('@',request()->email);
+            $url=$bbb->joinRoomAdmin($meeting,$name[0]);
+            return view('iframe',compact('url'));
             return redirect()->intended($bbb->joinRoomAdmin($meeting,$name[0]));
         }
         return view('demo');

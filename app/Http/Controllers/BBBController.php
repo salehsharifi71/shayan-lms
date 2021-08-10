@@ -15,7 +15,7 @@ class BBBController extends BigBlueButton
 
     public function setBBB(){
         $this->securitySecret   = '9EuU5B4KVt5Rs0iF37XrK45jz9YVpaTEJQC0QxqhRL0';
-        $this->bbbServerBaseUrl = 'https://vpn.kamexexchange.com/bigbluebutton/';
+        $this->bbbServerBaseUrl = 'https://srv4.shayanlms.com/bigbluebutton/';
         $this->urlBuilder       = new UrlBuilder($this->securitySecret, $this->bbbServerBaseUrl);
 
     }

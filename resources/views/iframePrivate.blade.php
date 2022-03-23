@@ -1,4 +1,4 @@
-@extends('layouts.panel')
+@extends('layouts.sites')
 @section('title')  @endsection
 @section('headMeta') <style>.footer-area{display:none}</style> @endsection
 @section('publicContent')

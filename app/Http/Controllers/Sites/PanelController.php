@@ -66,7 +66,11 @@ class PanelController extends Controller
                     else
                         $url =$bbb->joinRoom($meeting,$client->name);
 
-                    return view('iframePrivate',compact('url'));
+                    $organizer= $this->organizer;
+                    if(!$organizer){
+                        return 0;
+                    }
+                    return view('iframePrivate',compact('url','organizer'));
 //                    return redirect()->intended($url);
                 }else{
                     return redirect(route('PublicClass',$hash))->withErrors(['error'=>__('info.dontStartYetTime')]);

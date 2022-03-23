@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::any('/jm/{hash}', 'HomeController@joinQuickRoom')->name('showIframe');
 
 if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTTP_HOST'))->first()) {
     Route::get('/', 'Sites\SiteController@index')->name('PublicSite');
@@ -54,6 +55,7 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
     Route::get('/callbackZarinPal', 'Bank\PaymentController@callbackZarinPal')->name('callbackZarinPal');
     Route::any('/payment/{kind}/{id?}', 'Bank\PaymentController@makePayment')->name('makePayment');
 }else{
+
     Route::get('{any?}/{?any}', function ( ) {
         //
         return "<center><a href='http://".env('APP_LTE')."'>".env('APP_LTE')."</a></center>";

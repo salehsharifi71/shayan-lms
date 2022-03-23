@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\JoinRoom;
 use App\Model\Meeting\Demo;
 use App\Model\Meeting\HashMeeting;
 use App\Model\Meeting\Meet;
@@ -91,6 +92,12 @@ subject : '.request()->subject.'
 
         $url=$bbb->joinRoomAdmin($meeting,'saleh');
         return view('iframe',compact('url'));
+
+    }
+    public function joinQuickRoom($hash){
+        $jm=JoinRoom::where('hash',$hash)->firstOrFail();
+        $url=$jm->url;
+        return view('iframePrivate',compact('url'));
 
     }
     public function directAccess($hash){

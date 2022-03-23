@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Sites;
 
 use App\Http\Controllers\BBBController;
 use App\Http\Controllers\Controller;
+use App\Model\JoinRoom;
 use App\Model\Meeting\Meet;
 use App\Model\Organizer\ClientMeta;
 use App\Model\Organizer\Organizer;
@@ -65,7 +66,11 @@ class PanelController extends Controller
                         $url =$bbb->joinRoomAdmin($meeting,$client->name);
                     else
                         $url =$bbb->joinRoom($meeting,$client->name);
-
+                    $jm=new JoinRoom();
+                    $jm->hash=uniqid();
+                    $jm->url=$url;
+                    $jm->save();
+                    return  redirect(route('showIframe',$jm->hash));
                     return view('iframePrivate',compact('url'));
 //                    return redirect()->intended($url);
                 }else{

@@ -47,7 +47,6 @@ if ( \App\Model\Organizer\Organizer::where('domain', request()->server->get('HTT
     Route::get('/organizer/classUser/{action}/{id}', 'Organizer\ClassController@changeUser')->name('changeUser');
     Route::get('/organizer/changeTeacher/{action}/{id}', 'Organizer\ClassController@changeTeacher')->name('changeTeacher');
     Route::any('/organizer/quickLogin/{id}', 'Organizer\ClassController@quickLogin')->name('orgQuickLogin');
-
     Route::any('/support/', 'Organizer\ClassController@classWebinarEdit')->name('support');
     Route::any('/support/new', 'Organizer\ClassController@classWebinarEdit')->name('supportNew');
 

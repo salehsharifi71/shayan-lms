@@ -16,7 +16,7 @@ class CreateJoinRoomsTable extends Migration
         Schema::create('join_rooms', function (Blueprint $table) {
             $table->id();
             $table->string('hash')->unique();
-            $table->string('url');
+            $table->text('url');
             $table->timestamps();
         });
     }

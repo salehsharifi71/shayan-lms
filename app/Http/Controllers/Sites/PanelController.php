@@ -70,7 +70,7 @@ class PanelController extends Controller
                     $jm->hash=uniqid();
                     $jm->url=$url;
                     $jm->save();
-                    return  redirect(route('showIframe',$jm->hash));
+//                    return  redirect(route('showIframe',$jm->hash));
                     return view('iframePrivate',compact('url'));
 //                    return redirect()->intended($url);
                 }else{

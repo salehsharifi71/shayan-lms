@@ -17,9 +17,18 @@
 {{--        <!--end::Body-->--}}
 {{--    </div>--}}
     <!--end::Forms Widget 2-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meet</title>
+</head>
+<body>
 
-    <!-- Start Contact Info Area -->
-    <iframe style="width: 100%;height: 100%;top: 0;right: 0;position: fixed;border: none;z-index: 100000000000000000;" id="showClass"  sandbox="allow-same-origin allow-forms allow-scripts" allow="microphone *; camera *; display-capture *" allowfullscreen="" data-hj-allow-iframe="" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="{{$url}}" webkitallowfullscreen=""></iframe>
+<iframe style="width: 100%;height: 100%;top: 0;right: 0;position: fixed;border: none;z-index: 100000000000000000;" id="showClass"  sandbox="allow-same-origin allow-forms allow-scripts" allow="microphone *; camera *; display-capture *" allowfullscreen="" data-hj-allow-iframe="" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="{{$url}}" webkitallowfullscreen=""></iframe>
+
+</body>
+</html>
+<!-- Start Contact Info Area -->
 
     <!-- End Contact Info Area -->
 {{--@endsection--}}

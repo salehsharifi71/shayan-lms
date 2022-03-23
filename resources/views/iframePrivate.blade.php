@@ -1,7 +1,7 @@
 @extends('layouts.sites')
 @section('title')  @endsection
 @section('headMeta') <style>.footer-area{display:none}</style> @endsection
-@section('publicContent')
+@section('siteContent')
 
     <!-- Start Page Title Area -->
     <section class="page-title-banner">

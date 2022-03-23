@@ -19,7 +19,7 @@
     <!--end::Forms Widget 2-->
 
     <!-- Start Contact Info Area -->
-    <iframe style="width: 100%;height: 100%;top: 0;right: 0;position: fixed;z-index: 100000000000000000;" id="showClass" allow="microphone *; camera *; display-capture *" allowfullscreen="" data-hj-allow-iframe="" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="{{$url}}" webkitallowfullscreen=""></iframe>
+    <iframe style="width: 100%;height: 100%;top: 0;right: 0;position: fixed;border: none;z-index: 100000000000000000;" id="showClass" allow="microphone *; camera *; display-capture *" allowfullscreen="" data-hj-allow-iframe="" mozallowfullscreen="" sandbox="allow-same-origin" msallowfullscreen="" oallowfullscreen="" src="{{$url}}" webkitallowfullscreen=""></iframe>
 
     <!-- End Contact Info Area -->
 @endsection

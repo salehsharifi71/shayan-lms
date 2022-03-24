@@ -27,7 +27,9 @@
 <body>
 
 <iframe style="width: 100%;height: 100%;top: 0;right: 0;position: fixed;border: none;z-index: 100000000000000000;" id="showClass"  allow="microphone *; camera *; display-capture *" allowfullscreen="" data-hj-allow-iframe="" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="{{$url}}" webkitallowfullscreen=""></iframe>
-
+<script>
+   document.getElementById('showClass').setAttribute('allow','microphone *; camera *; display-capture *');
+</script>
 </body>
 </html>
 <!-- Start Contact Info Area -->

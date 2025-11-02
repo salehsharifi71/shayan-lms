@@ -99,6 +99,12 @@
                 <div class="single-footer-widget">
                     <a href="{{route('welcome')}}" class="logo"><img src="/assets/publicTheme/img/logo2.png" alt="logo2" /></a>
                     <p>@lang('info.descriptionLong')</p>
+                    <p>
+                        <a class=" "  href="https://tondton.com/buy-tg-stars-gifts">خرید گیفت تلگرام</a> |
+                        <a class=" " href="https://tondton.com/telegram-resale-gift">خرید NFT تلگرام</a> |
+                        <a href="https://smmacc.com/product/telegram-premium" title="Buy Telegram Premium">Buy Telegram Premium</a> |
+                        
+                    </p>
                     {{--<ul class="social-list">--}}
                         {{--<li>--}}
                             {{--<a href="#"><i class="icofont-facebook"></i></a>--}}
